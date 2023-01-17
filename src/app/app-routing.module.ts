@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  // },
-
   {
     path: '',
-    loadChildren: () => import('./detailformat/detailformat.module').then(m => m.DetailformatPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
+
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./detailformat/detailformat.module').then(m => m.DetailformatPageModule)
+  // },
   {
     path: 'bienvenue',
     loadChildren: () => import('./bienvenue/bienvenue.module').then( m => m.BienvenuePageModule)
@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'detailformat',
     loadChildren: () => import('./detailformat/detailformat.module').then( m => m.DetailformatPageModule)
   },
+  {
+    path: 'participant',
+    loadChildren: () => import('./participant/participant.module').then( m => m.ParticipantPageModule)
+  },
+
 
 ];
 @NgModule({
