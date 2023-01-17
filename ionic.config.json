@@ -1,0 +1,7 @@
+{
+  "name": "Doniso",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

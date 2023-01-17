@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <ion-title></ion-title> -->
+
+      <div class="entete">
+
+        <div class=" gauche">
+          <img src="assets/images/logo.png" alt="" style="height: 45px;">
+        </div>
+        <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
+        <div class="droite">
+           <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px;">
+          </div>
+
+      </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Image slide -->
+  <h5 style="text-align: center; font-weight: bold;">Nos formation à venir</h5>
+  <ion-slides [options]="options">
+    <ion-slide>
+        <ion-card >
+          <img src="../../../assets/images/perfect2.png" alt="" srcset="">
+                  <p> Titre Cours avenir</p>
+        </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="../../../assets/images/perfect.png" alt="" srcset="">
+        <p> Titre Cours avenir</p>
+      </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <img src="../../../assets/images/perfect1.png" alt="" srcset="">
+      <p> Titre Cours avenir</p>
+         </ion-card>
+</ion-slide>
+  </ion-slides>
+
+
+  <!-- Formations -->
+  <ion-card>
+    <img alt="Silhouette of mountains" src="/assets/images/cours.jpg" />
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Comment se comporter dans une entreprise</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+
+    <!-- Button -->
+    <div class="buttonCont">
+      <div class="gauche">Voir Plus</div>
+      <div class="droite">Participer</div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="/assets/images/cours.jpg" />
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Comment se comporter dans une entreprise</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+
+    <!-- Button -->
+    <div class="buttonCont">
+      <div class="gauchebutton">Voir Plus</div>
+      <div class="droitebutton">Participer</div>
+    </div>
+  </ion-card>
+
+</ion-content>

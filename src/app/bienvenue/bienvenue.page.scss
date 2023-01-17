@@ -1,0 +1,76 @@
+ion-content{
+  // --offset-bottom: initial !important;
+  // background-color: teal;
+  // background-image: url("/assets/images/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+//le conteneur de mon logo
+.conteneur-logo{
+  // background-color: #F4F5F8;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+
+  // grid-area: conteneur-logo;
+  // background-color: red;
+}
+//Le logo de l'application
+.logo{
+  height: 140px;
+  width: 120px;
+}
+
+//Le bloc commencer
+.commencer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin-top: -20px;
+
+}
+
+//le button commencer
+.commencer ion-button{
+  width: 80%;
+  --background: teal ;
+  // --color-hover: #14AE5C;
+}
+
+.commencer-button :hover{
+  --background: teal!important;
+  scale: 2!important;
+}
+
+
+//le nom de l'application
+.nomapp{
+  color: teal;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+//le contenu centrer en bas
+.bas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 20vh;
+  margin-top: -20px;
+
+  // margin-bottom: -100%x;
+  // grid-area: bas;
+  // background-color: #14AE5C;
+}
+

@@ -1,0 +1,82 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="connexion"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: #F4F5F8">
+
+  <div class="containeur">
+    <div class="conteneur-logo">
+      <img class="logo" src="../assets/images/logo.png">
+    </div>
+
+    <div class="formulaire">
+      <div class="input">
+        <label>Nom utilisateur <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control" placeholder="Effet01">
+      </div>
+
+      <div class="input">
+        <label>Nom complet <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Ddjiguiba Barema">
+      </div>
+
+      <div class="input">
+        <label>Profession <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Développeur">
+      </div>
+
+      <!-- <div class="input">
+        <label>Contact <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="number" class="form-control"  id="password" data-toggle="password" placeholder="73100973">
+      </div> -->
+
+
+      <div class="input">
+        <label>Email</label>
+        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="djiguibabarema@gmail.com">
+      </div>
+
+      <form>
+        <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;">
+          <option value="Sexe">Genre</option>
+          <option value="femme">Femme</option>
+          <option value="homme">Homme</option>
+        </select>
+      </form>
+
+    <form action=""  style="margin-left: 55%; ">
+      <label for="myfile" style="font-weight: bold;">Photo</label>
+      <input type="file" name="photo"><br><br>
+    </form>
+
+
+      <div class="input" style="margin-top: -19px;">
+        <label>Mot de passe <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="password" class="form-control"  id="password" data-toggle="password" placeholder="Mot de passe">
+      </div>
+
+      <!-- <div class="input">
+        <label>Confirmer <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="password" class="form-control"  id="password" data-toggle="password" placeholder="Retaper le mot de passe">
+      </div> -->
+
+      <div class="conteneur-submit">
+        <ion-button class="envoyer-input" type="submit" expand="block" routerLink="/tabs/tab1">S'INSCRIRE</ion-button>
+      </div>
+
+      <div class="autres-options">
+        <div style="font-size: 14px;">
+          Vous avez déjà un compte ? <span class="connexion" routerLink="/connexion">Connexion</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>
