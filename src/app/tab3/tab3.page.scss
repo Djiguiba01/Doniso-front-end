@@ -1,0 +1,42 @@
+
+// //La barre en haut
+ion-toolbar{
+  --background: teal;
+  color: #fff;
+  padding: 0;
+}
+
+//Pour retirer la scrollbar
+ion-content {
+  width: calc(100% + 22px);
+}
+
+.entete{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.droite img{
+  width: 37px;
+  border-radius: 50%;
+}
+
+// Corps Card
+.buttonCont{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.gauchebutton, .droitebutton{
+  background-color: teal;
+  color: #fff;
+  text-align: center;
+  width: 75px;
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 6px;
+  font-weight: bold;
+}
+

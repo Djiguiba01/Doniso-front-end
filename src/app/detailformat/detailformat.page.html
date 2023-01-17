@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-title>Détail formation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="fixe">
+    <i routerLink="/accueil" id="icon" class="fa-solid fa-arrow-left" style="font-size:25px; margin-top: 35px; margin-left: 15px;"></i>
+   <button class="valid">Valider</button>
+  </div> -->
+
+  <div class="toutbody">
+
+  <img src="assets/images/elearning.jpg" alt="img" class="responsive" width="600" height="400">
+
+
+  <h1 class="responsive-font-example">Développement personnel</h1>
+  <div class="infodesc">
+  <h2 class="detail">Description : <h6></h6></h2>
+  <h2 class="detail">Formateur : <h6></h6></h2>
+  <h2 class="detail">Lieu : <h6></h6></h2>
+  <h2 class="detail">Heure : <h6></h6></h2>
+  <h2 class="detail">Contact : <h6></h6></h2>
+  <h2 class="detail">Date début : <h6></h6></h2>
+  <h2 class="detail">Date fin : <h6></h6></h2>
+  </div>
+
+  <!-- Commentaire -->
+  <div class="contact-box">
+
+    <form action="">
+      <p class="textcom">Commentaire :</p>
+      <input type="text" class="input-field" placeholder="Nom"> <br><br>
+      <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage"></textarea>
+        </form>
+        <button class="buttmess">Envoyer</button>
+
+        <!-- *ngFor="let game of games | paginate:{itemsPerPage:10, currentPage:p}" -->
+        <div class="card" id="card2" style="width: 40rem; margin-top: 50px; margin-bottom: 45px; " >
+          <div class="card-body" >
+            <h5 class="card-title">Djiguiba</h5>
+            <p class="card-text">Wahou... formation vraiment intéressante</p>
+
+          </div>
+        </div>
+        <div class="paginat">
+          <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->
+        </div>
+
+  </div>
+  </div>
+
+
+</ion-content>

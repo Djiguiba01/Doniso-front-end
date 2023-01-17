@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {
     path: '',
-    loadChildren: () => import('./bienvenue/bienvenue.module').then(m => m.BienvenuePageModule)
+    loadChildren: () => import('./detailformat/detailformat.module').then(m => m.DetailformatPageModule)
   },
   {
     path: 'bienvenue',
@@ -22,7 +22,12 @@ const routes: Routes = [
   {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
-  }
+  },
+  {
+    path: 'detailformat',
+    loadChildren: () => import('./detailformat/detailformat.module').then( m => m.DetailformatPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

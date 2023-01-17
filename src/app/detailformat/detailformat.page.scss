@@ -1,0 +1,137 @@
+
+
+ion-toolbar{
+  background-color: teal;
+}
+//Pour retirer la scrollbar
+ion-content {
+  width: calc(100% + 22px);
+}
+
+.responsive {
+  width: 100%;
+  // height: auto;
+}
+
+
+.toutbody{
+margin-top: 10%;
+}
+
+.buttmess:hover{
+background-color: rgb(5, 5, 49);
+}
+
+//   Module
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+  .responsive-font-example {
+    font-size: 80px;
+    text-align: center;
+  }
+  .detail{
+      font-weight: bold;
+      font-size: 30px;
+      padding-left: 20px;
+    }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .responsive-font-example {
+    font-size: 60px;
+    text-align: center;
+  }
+  .detail{
+      font-weight: bold;
+      font-size: 23px;
+      padding-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+
+  .toutbody{
+    margin-top: 1%;
+   }
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.responsive-font-example {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.detail{
+  // font-weight: bold;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.infodesc{
+  margin-top: 30px;
+}
+// Commentaire
+.contact-box{
+  padding-left: 50px;
+ }
+ .input-field{
+   width: 70%;
+   height: 35px;
+ }
+ #textareatext{
+   width: 80%;
+   height: 55px;
+ }
+
+ .buttmess{
+  background-color: teal;
+  color: white;
+  height: 40px;
+  width: 130px;
+  border-radius: 5px;
+  font-size: 20px;
+ }
+// message ecrit
+
+ #card2{
+  // margin-top: 15px !important;
+  width: 90% !important;
+ }
+ .card-title{
+  font-size: 18px !important;
+  font-weight: bold;
+ }
+ .paginat{
+  margin-top: 15px;
+}
+pagination-controls{
+  font-size: 11px;
+  font-weight: bold;
+}
+
+}
+
+// Commentaire
+
+.textcom{
+  font-size: 22px;
+  // text-decoration: underline;
+  font-weight: bold;
+}
+.contact-box{
+  padding-top: 25px;
+ padding-left: 10px;
+}
+input{
+  width: 20%;
+  height: 50px;
+}
+textarea{
+  width: 40%;
+  height: 100px;
+
+}
+//
