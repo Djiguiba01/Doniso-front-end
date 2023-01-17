@@ -1,9 +1,55 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>participant</ion-title>
+    <ion-title>PARTICIPATION</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <div class="containeur">
+
+    <div class="formulaire">
+      <div class="input">
+        <label>Nom<span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control" placeholder="Votre nom">
+      </div>
+
+      <div class="input">
+        <label>Prenom <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Votre prenom">
+      </div>
+
+      <div class="input">
+        <label>Profession <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Développeur">
+      </div>
+
+      <!-- <div class="input">
+        <label>Contact <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="number" class="form-control"  id="password" data-toggle="password" placeholder="73100973">
+      </div> -->
+
+
+      <div class="input">
+        <label>Email <span class="obligatoire">*</span></label>
+        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="djiguibabarema@gmail.com">
+      </div>
+
+      <form>
+        <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;">
+          <option value="Sexe">Genre</option>
+          <option value="femme">Femme</option>
+          <option value="homme">Homme</option>
+        </select>
+      </form>
+
+      <div class="conteneur-submit">
+        <ion-button class="envoyer-input" type="submit" expand="block" routerLink="/tabs/tab1">PARTICIPER</ion-button>
+      </div>
+
+    </div>
+  </div>
+
+
 
 </ion-content>
