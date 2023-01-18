@@ -437,6 +437,35 @@ tr td:last-child{
 	}
 }
 @media only screen and (max-width: 560px){
+
+	// Menu
+
+	.sidebar, ul{
+		width: 195px !important;
+	}
+	.sidebar {
+		width: 175px !important;
+		font-size: 20px;
+	}
+
+	.sidebar-menu span{
+		margin-left: -17px;
+		font-size: 15px;
+	}
+	.iconmenu{
+		visibility: hidden;
+	}
+	li{
+		margin-left: -20px;
+       margin-top: 35px;
+	}
+
+	.sidebar-menu[_ngcontent-uis-c144] a[_ngcontent-uis-c144] {
+		width: 150px;
+		margin-top: 20px;
+	}
+
+	// :::::::::::::::::::::::::
 	.accueil{
 		margin-left: 3px;
 	}
