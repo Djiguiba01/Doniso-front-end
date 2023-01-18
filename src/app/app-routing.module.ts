@@ -9,7 +9,7 @@ const routes: Routes = [
 
   // {
   //   path: '',
-  //   loadChildren: () => import('./detailformat/detailformat.module').then(m => m.DetailformatPageModule)
+  //   loadChildren: () => import('./bienvenue/bienvenue.module').then(m => m.BienvenuePageModule)
   // },
   {
     path: 'bienvenue',
@@ -31,6 +31,18 @@ const routes: Routes = [
     path: 'participant',
     loadChildren: () => import('./participant/participant.module').then( m => m.ParticipantPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },  {
+    path: 'ajoutformation',
+    loadChildren: () => import('./ajoutformation/ajoutformation.module').then( m => m.AjoutformationPageModule)
+  },
+  {
+    path: 'detailformateur',
+    loadChildren: () => import('./detailformateur/detailformateur.module').then( m => m.DetailformateurPageModule)
+  },
+
 
 
 ];

@@ -22,6 +22,26 @@ ion-content {
 }
 
 // Corps Card
+#demandformat{
+  // display: flex;
+  // justify-content: space-between;
+  background-color: teal;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 48%;
+  margin-top: 5px;
+  position: fixed;
+  z-index: 1;
+  font-size: px;
+  width: 50%;
+}
+ion-card{
+  --z-index: 2;
+}
+ion-slides{
+  --z-index: 2;
+}
+
 .buttonCont{
   display: flex;
   justify-content: space-between;
