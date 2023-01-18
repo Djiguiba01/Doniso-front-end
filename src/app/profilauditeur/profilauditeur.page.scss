@@ -1,0 +1,26 @@
+// Entête
+  #edit{
+    background-color: teal;
+    color: white;
+    // border: 1px solid teal !important;
+  }
+  #edit:hover{
+    background-color: rgb(5, 5, 49);
+
+  }
+    // Enlever la bar scroll
+    body{
+        overflow: scroll;
+    }
+    body::-webkit-scrollbar{
+        width: 0;
+    }
+  @media (max-width:600px) {
+
+    #toutbod{
+      margin-top: -12%;
+      margin-bottom: 5%;
+    }
+    
+  }
+  
