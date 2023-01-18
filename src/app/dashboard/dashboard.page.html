@@ -24,8 +24,9 @@
            <ul>
                <li><a routerLink="/accueil" class="active"><span id="iconmenu" class="fa fa-home"></span><span>Accueil</span></a></li>
                <li><a href="#"><span class="fa fa-tasks"></span><span routerLink="/ajoutformation">Créer formation</span></a></li>
-               <li><a href="#"><span class="fa fa-tasks"></span><span routerLink="/modformation">Modifier formation</span></a></li>
-               <li><a href="#"><span class="fa fa-th-large"></span><span>Modifier professeur</span></a></li>
+               <li><a href="#"><span class="fa fa-tasks"></span><span routerLink="/modiformation">Modifier formation</span></a></li>
+               <!-- <li><a href="#"><span class="fa fa-th-large"></span><span routerLink="/ajoutformateur">Ajouter formateur</span></a></li> -->
+               <li><a href="#"><span class="fa fa-th-large"></span><span routerLink="/modiformateur">Modifier formateur</span></a></li>
                <li><a href="#"><span class="fa fa-line-chart"></span><span>Modifier auditeur</span></a></li>
                <li><a href="#"><span class="fa fa-address-book"></span><span>aaaaaaaaaa</span></a></li>
                <!-- <li><a href="#"><span class="fa fa-user"></span><span>Contact</span></a></li> -->
@@ -148,7 +149,7 @@
             <div class="header-case">
                 <h2>Les Formateurs</h2>
             </div>
-            <button class="btn">Ajouter <span class="fa fa-arrow-right"></span></button>
+            <button class="btn" routerLink="/ajoutformateur">Ajouter <span class="fa fa-arrow-right"></span></button>
 
             <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
             <div class="body-case" >
@@ -182,6 +183,7 @@
                <div class="header-case">
                    <h2>Les auditeurs</h2>
                </div>
+               <button class="btn" routerLink="/ajoutauditeur">Ajouter <span class="fa fa-arrow-right"></span></button>
 
                <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
                <div class="body-case">
@@ -202,7 +204,6 @@
                    </div>
                </div>
 
-               <button class="btn">voir plus <span class="fa fa-arrow-right"></span></button>
                <div class="paginat">
                 <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->
               </div>

@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'ajoutformation',
     loadChildren: () => import('./ajoutformation/ajoutformation.module').then( m => m.AjoutformationPageModule)
   },
@@ -42,6 +43,28 @@ const routes: Routes = [
     path: 'detailformateur',
     loadChildren: () => import('./detailformateur/detailformateur.module').then( m => m.DetailformateurPageModule)
   },
+  {
+    path: 'modiformateur',
+    loadChildren: () => import('./modiformateur/modiformateur.module').then( m => m.ModiformateurPageModule)
+  },
+  {
+    path: 'modiformation',
+    loadChildren: () => import('./modiformation/modiformation.module').then( m => m.ModiformationPageModule)
+  },
+  {
+    path: 'ajoutformateur',
+    loadChildren: () => import('./ajoutformateur/ajoutformateur.module').then( m => m.AjoutformateurPageModule)
+  },
+  {
+    path: 'ajoutauditeur',
+    loadChildren: () => import('./ajoutauditeur/ajoutauditeur.module').then( m => m.AjoutauditeurPageModule)
+  },
+  {
+    path: 'modifauditeur',
+    loadChildren: () => import('./modifauditeur/modifauditeur.module').then( m => m.ModifauditeurPageModule)
+  },
+
+
 
 
 
