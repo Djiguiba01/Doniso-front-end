@@ -8,16 +8,54 @@
           <img src="assets/images/logo.png" alt="" style="height: 45px;">
         </div>
         <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
-        <div class="droite">
+        <!-- <div class="droite">
            <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px;">
-          </div>
+          </div> -->
+          <ion-list style="border-radius: 50%; width: 17%; height: 50%;"; >
+            <ion-item >
+              <!-- <div class="eee" style="">
+                <img src="assets/images/djiguiba.jpg" alt="" style="height: 40px;">
+              </div> -->
+              <ion-select interface="popover" placeholder=" ">
+                <ion-select-option value="apples">Apples</ion-select-option>
+                <ion-select-option value="oranges">Oranges</ion-select-option>
+                <ion-select-option value="bananas">Bananas</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
 
       </div>
+
 
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="ss" >
+
+
+  <!-- <div class="btn-group" style="padding-left: 60%;">
+    <button type="button" class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="/assets/images/djiguiba.jpg" alt="" style="height: 50px; border-radius: 50%; width: 85%;">
+
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" style="">
+      <li><button class="dropdown-item" type="button">Action</button></li>
+      <li><button class="dropdown-item" type="button">Another action</button></li>
+      <li><button class="dropdown-item" type="button">Something else here</button></li>
+    </ul>
+  </div> -->
+
+  <ion-list style="width: 50%; ">
+    <ion-item>
+      <ion-select interface="popover" placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
 
 
 </ion-content>
