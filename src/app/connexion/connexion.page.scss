@@ -23,7 +23,10 @@ ion-title{
   height: 125px;
   width: 100px;
 }
-
+.trait{
+  width: 52%;
+  border: 2px solid teal;
+}
 
 //le conteneur de l'application
 .conteneur-logo{
@@ -68,9 +71,14 @@ ion-title{
 }
 
 .input{
+  width: 80%;
   font-weight: bold;
 }
+ion-button{
+  width: 80% !important;
+}
 .conteneur-submit{
+  padding-top: 7%;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -62,7 +62,8 @@ const routes: Routes = [
   {
     path: 'modifauditeur',
     loadChildren: () => import('./modifauditeur/modifauditeur.module').then( m => m.ModifauditeurPageModule)
-  },  {
+  },
+  {
     path: 'profilauditeur',
     loadChildren: () => import('./profilauditeur/profilauditeur.module').then( m => m.ProfilauditeurPageModule)
   },

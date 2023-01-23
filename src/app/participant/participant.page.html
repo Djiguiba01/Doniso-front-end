@@ -43,11 +43,21 @@
       </form>
 
       <div class="conteneur-submit">
-        <ion-button class="envoyer-input" type="submit" expand="block" routerLink="/tabs/tab1">PARTICIPER</ion-button>
+        <ion-button class="envoyer-input" type="submit" expand="block" id="open-popover" >PARTICIPER</ion-button>
       </div>
 
     </div>
   </div>
+<!-- Popup -->
+<ion-popover [keepContentsMounted]="true" trigger="open-popover">
+  <ng-template >
+    <div class="textpop">Voulez-vous participez ?</div>
+    <div class="toutpop" style="display: flex; justify-content: space-between; margin-left: 3%; margin-right: 3%;">
+      <div class="gauchepop" routerLink="/tabs"> Annuler</div>
+      <div class="droitepop"> Envoyer</div>
+    </div>
+  </ng-template>
+</ion-popover>
 
 
 
