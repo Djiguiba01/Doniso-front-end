@@ -4,11 +4,11 @@
 
       <div class="entete">
 
-        <div class=" gauche">
+        <div class=" gauche" >
           <img src="assets/images/logo.png" alt="" style="height: 45px;">
         </div>
         <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
-        <div class="droite">
+        <div class="droite" routerLink="/profilauditeur">
            <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px;">
           </div>
 
@@ -20,7 +20,7 @@
 <ion-content [fullscreen]="true">
 
   <!-- Image slide -->
-    <button id="demandformat">Démander formation</button>
+    <!-- <button id="demandformat">Démander formation</button> -->
 
 <!-- <div class="demandformat">
   <div class="venir1"></div>
@@ -29,12 +29,12 @@
   </div>
 </div> -->
 
-  <h6 style="text-align: center; font-weight: bold;">Formation à venir </h6>
+  <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; text-decoration: underline 2px teal;">Formation à venir </h6>
   <ion-slides [options]="options">
     <ion-slide>
         <ion-card >
           <img src="../../../assets/images/perfect2.png" alt="" srcset="">
-                  <p>Titre Cours avenir </p>
+                  <p style="color: teal;">Titre Cours avenir </p>
         </ion-card>
     </ion-slide>
 
@@ -55,6 +55,7 @@
 
 
   <!-- Formations -->
+  <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; text-decoration: underline 2px teal; margin-bottom: 7%;">Nos formations en cours</h6>
   <ion-card>
     <img alt="Silhouette of mountains" src="/assets/images/cours.jpg" />
     <ion-card-header>
@@ -72,7 +73,7 @@
     </div>
   </ion-card>
   <ion-card>
-    <img alt="Silhouette of mountains" src="/assets/images/cours.jpg" />
+    <img alt="Silhouette of mountains" src="/assets/images/cours1.webp" />
     <ion-card-header>
       <ion-card-title style="text-align: center;">Comment se comporter dans une entreprise</ion-card-title>
     </ion-card-header>

@@ -1,8 +1,11 @@
-
-
+// Entête
 ion-toolbar{
-  background-color: teal;
+  --background: teal;
+  color: #fff;
+  padding: 0;
 }
+
+
 //Pour retirer la scrollbar
 ion-content {
   width: calc(100% + 22px);
@@ -60,14 +63,14 @@ background-color: rgb(5, 5, 49);
 }
 
 .responsive-font-example {
-  font-size: 25px;
+  font-size: 17px;
   font-weight: bold;
   text-align: center;
 }
 
 .detail{
   // font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   padding-left: 10px;
 }
 .infodesc{

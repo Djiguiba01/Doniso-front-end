@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormationService } from '../Service/formation.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,8 +8,27 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  formationencours: any; // Voir tout formation
+  formationVoiId: any; // Voir Par ID
 
+  constructor( private service : FormationService) {}
+
+  // Formations en cours:::::::::::::::::
+  ngOnInit(): void {
+    this.service.getFormationencours().subscribe(data=>{
+    this.formationencours=data;
+  });
+
+  // Formations Par ID:::::::::::::::::
+//   this.service.getFormationid(idFormat).subscribe(data=>{
+//   this.formationVoiId=data;
+// });
+ 
+  }
+
+  
+
+  // Slide
   options={
     slidesPerView:1,   // NOMBRE DE SLIDE PAR PAGE = 1
     centeredSlider:true,

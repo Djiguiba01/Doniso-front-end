@@ -179,7 +179,7 @@ main{
 	box-shadow: 2px 5px 10px 2px rgb(0 0 0 / 10%);
 }
 .card-single span:first-child{
-	color: #f8e80c;
+	color: teal;
 }
 .card-single span:last-child{
 	font-size: 2rem;
@@ -259,7 +259,7 @@ td .status-produit{
 	background-color: #ec1c24;
 }
 .status-produit.color-two{
-	background-color: #fff200;
+	background-color: teal;
 }
 .status-produit.color-three{
 	background-color: #b83dba;
@@ -297,6 +297,7 @@ tr td:last-child{
 	font-size: 1.2rem;
 	display: inline-block;
 	margin-left: .5rem;
+	
 }
 .fa-facebook{
 	color: #4267B2;
@@ -347,6 +348,51 @@ tr td:last-child{
 .red-icon{
 	color: red;
 	cursor: pointer;
+}
+
+#iconupdate{
+	color: #0f056b;
+	margin-right: 30px;
+	font-size: 30px;
+}
+
+#icondelete{
+	color: red;
+	font-size: 30px;
+
+}
+
+.encours{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+.gauchecours{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: 25px;
+}
+.droitecours{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-size: 25px;
+}
+.encours{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+.gauchecours{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	color: #0f056b;
+	font-size: 25px;
+}
+.droitecours{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	color: teal;
+	font-size: 25px;
 }
 
 /* La responsivité */
@@ -428,9 +474,29 @@ tr td:last-child{
 }
 @media only screen and (max-width: 560px){
 
+	#iconupdate{
+		margin-right: 13px;
+		color: #0f056b;
+		font-size: 22px;
+
+	}
+	#icondelete{
+		color: red;
+		font-size: 22px;
+
+	}
+	.stock{
+		width: 100%;
+	}
+	// .container{
+	// 	width: 57%;
+	// 	margin-left: -1%;
+	// }
+
 	// Menu
 
 	.sidebar, ul{
+		margin-top: 10% !important;
 		width: 195px !important;
 	}
 	.sidebar {
@@ -438,9 +504,19 @@ tr td:last-child{
 		font-size: 20px;
 	}
 
+	.sidebar-menu {
+		margin-left: -23px;
+		font-size: 15px;
+	}
+	#modimenu{
+		margin-left: -20px;
+	}
 	.sidebar-menu span{
 		margin-left: -17px;
 		font-size: 15px;
+	}
+	#iconicon{
+		visibility: hidden;
 	}
 	.iconmenu{
 		visibility: hidden;
@@ -486,4 +562,9 @@ tr td:last-child{
 		font-size: 11px;
 		font-weight: bold;
 	  }
+
+	//   :::::::::::::::::::::::::::::after
+
+	
+
 }

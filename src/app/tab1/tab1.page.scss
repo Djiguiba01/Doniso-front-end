@@ -15,10 +15,18 @@ ion-content {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  margin-bottom: 1%;
+}
+.droite{
+  background-image: url("/assets/images/background.jpg");
+  width: 37px;
+  border-radius: 50%;
+  margin-right: 1%;
 }
 .droite img{
   width: 37px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 // Corps Card
