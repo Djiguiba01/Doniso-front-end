@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
@@ -67,6 +69,15 @@ const routes: Routes = [
     path: 'profilauditeur',
     loadChildren: () => import('./profilauditeur/profilauditeur.module').then( m => m.ProfilauditeurPageModule)
   },
+
+  // Component
+  // Par defaux
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  
+
 
 
 
