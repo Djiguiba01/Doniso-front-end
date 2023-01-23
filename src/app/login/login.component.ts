@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
-        this.route.navigateByUrl("/tabs/tab1");
-        this.reloadPage();
+        this.route.navigateByUrl("/tabs/tab1")
+        //this.reloadPage();
       },
       error: err => {
         this.errorMessage = err.error.message;
