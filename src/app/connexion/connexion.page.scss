@@ -14,9 +14,6 @@ ion-title{
   font-size: 15px;
 }
 
-// .containeur{
-
-// }
 
 //le logo de l'app
 .logo{
@@ -36,12 +33,12 @@ ion-title{
   height: 25vh;
 }
 
-.input{
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
+// .input{
+//   margin: auto;
+//   display: flex;
+//   justify-content: space-around;
+//   flex-direction: column;
+// }
 
 //le conteneur de mon formullaire
 .formulaire{
@@ -54,7 +51,9 @@ ion-title{
 }
 
 //le champ numero de telephone
-.telephone-input{
+.form-control{
+  border-radius: 7px;
+  height: 45px;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -63,22 +62,21 @@ ion-title{
   --background: teal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  width: 90%;
+  // width: 90%;
 }
 
 .obligatoire{
   color: red;
 }
-
-.input{
+form{
   width: 80%;
-  font-weight: bold;
 }
+
 ion-button{
-  width: 80% !important;
+  width: 100% !important;
 }
 .conteneur-submit{
-  padding-top: 7%;
+  padding-top: 13%;
   width: 100%;
   display: flex;
   justify-content: center;
