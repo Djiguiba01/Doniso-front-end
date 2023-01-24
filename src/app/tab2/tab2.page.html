@@ -27,29 +27,130 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  id="ss" >
+<ion-content class="card-background-page">
 
-<!-- 1 -->
-  <ion-list style="width: 50%; ">
-    <ion-item>
-      <ion-select interface="popover" placeholder="Select fruit">
-        <ion-select-option value="apples">Apples</ion-select-option>
-        <ion-select-option value="oranges">Oranges</ion-select-option>
-        <ion-select-option value="bananas">Bananas</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <ion-card >
+    <img src="assets/images/connexion.jpg"/>
+    <div class="card-title">Démander formation</div>
+    <div class="card-subtitle"><button>Soumettre</button></div>
+  </ion-card>
 
-  <!--  --> 
+  <!-- :::::::::::: -->
+  
+<ion-header >
 
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+  <ion-toolbar no-border-top >
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        A venir
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        Terminer
+      </ion-segment-button>
+      <ion-segment-button value="ducklings" style="margin-right: 10px;">
+        Contact
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+      
+      
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+     
+      <ion-card>
+        <img src="assets/images/perfect2.png" style="height: 200px; width: 100%;">
+      
+        <ion-card-content>
+          <h2 style="font-size: 20px;">Devéloppement personnel</h2>
+        </ion-card-content>
+
+        <div class="touterminer">
+
+          <div class="gaucheterminer"><ion-icon name="eye-outline"></ion-icon></div>
+        <div class="droiteterminer"><ion-icon name="chatbox-ellipses-outline"></ion-icon></div>
+        </div>
+      
+      </ion-card>
+      
+    </ion-list>
+
+    <!-- 3333333333 -->
+    <ion-list *ngSwitchCase="'ducklings'">
+
+      <ion-card style="width: 99%; background-color: teal; ">
+        <ion-card-header>   
+          <ion-card-title><ion-icon name="home-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
+          <ion-card-subtitle style="color: black; font-size: 20px;">Hamdallaye ACI</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card style="width: 99%; background-color: teal; ">
+        <ion-card-header>
+          <ion-card-title><ion-icon name="call-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
+          <ion-card-subtitle style="color: black; font-size: 20px;">+223 73100973</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+      
+      <ion-card style="width: 99%; background-color: teal; ">
+        <ion-card-header>  
+          <ion-card-title><ion-icon name="mail-open-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
+          <ion-card-subtitle style="color: black; font-size: 20px;">djiguibabarema@gmail.com</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+      <ion-card style="width: 99%; background-color: teal; ">
+        <ion-card-header>   
+          <ion-card-title><ion-icon name="logo-github" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
+          <ion-card-subtitle style="color: black; font-size: 20px;">https://github.com/Djiguiba01</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+      <!-- <section id="section-wrapper">
+        <div class="box-wrapper">
+            <div class="info-wrap">
+                <h2 class="info-title">Contact Information</h2>
+                <h3 class="info-sub-title">Fill up the form and our Team will get back to you within 24 hours</h3>
+                <ul class="info-details">
+                    <li>  
+                      <i class="fa-solid fa-house-user"></i>
+                        <a href="tel:+ 1235 2355 98">Hamdallaye ACI</a>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-phone-alt"></i>
+                      <a href="tel:+ 1235 2355 98">+ 1235 2355 98</a>
+                  </li>
+                    <li>
+                        <i class="fas fa-paper-plane"></i>
+                        <a href="mailto:info@yoursite.com">djiguibabarema@gmail.com</a>
+                    </li>
+                    <li> 
+                        <i class="fa-brands fa-github"></i>
+                        <a href="#">https://github.com/Djiguiba01</a>
+                    </li>
+                </ul>
+           
+            </div> 
+       
+        </div>
+    </section> -->
+    
+    </ion-list>
   </div>
-</div>
-
-
 </ion-content>

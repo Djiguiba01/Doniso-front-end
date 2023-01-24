@@ -40,3 +40,57 @@ ion-content {
   padding-top: 6px;
   font-weight: bold;
 }
+// Card::::::::::::after
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 30%;
+    width: 98%;
+    margin-left: 1%;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 10%;
+    font-size: 1.7em;
+    width: 100%;
+    font-weight: bold;
+    color: teal;
+  }
+
+  .card-subtitle {
+    font-size: 2.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+  button{
+    background-color: teal;
+    color: #fff;
+    width: 53%;
+    height: 45px;
+    border-radius: 5px;
+  }
+}
+
+// Card 2:::::::::::::after
+
+/* iOS places the subtitle above the title */
+//  
+
+.touterminer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.gaucheterminer, .droiteterminer{
+  cursor: pointer;
+  font-size: 35px;
+
+}
+
+// Contact:::::::::::::::::after
