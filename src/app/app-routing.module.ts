@@ -4,15 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-
   // {
   //   path: '',
-  //   loadChildren: () => import('./bienvenue/bienvenue.module').then(m => m.BienvenuePageModule)
+  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   // },
+
+  {
+    path: '',
+    loadChildren: () => import('./bienvenue/bienvenue.module').then(m => m.BienvenuePageModule)
+  },
   {
     path: 'bienvenue',
     loadChildren: () => import('./bienvenue/bienvenue.module').then( m => m.BienvenuePageModule)
@@ -73,15 +73,9 @@ const routes: Routes = [
   // Component
   // Par defaux
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
-
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   
-
-
-
-
-
 
 
 ];
