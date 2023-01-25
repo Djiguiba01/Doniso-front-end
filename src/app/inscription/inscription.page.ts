@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../_services/auth.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class InscriptionPage implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,9 @@ export class InscriptionPage implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        // Redirection page
+        this.route.navigateByUrl("/connexion")
+
       },
       error: err => {
         this.errorMessage = err.error.message;
