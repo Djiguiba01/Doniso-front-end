@@ -13,9 +13,9 @@ export class InscriptionPage implements OnInit {
     email: null,
     password: null,
     nom: null,
+    profession:null,
     contact: null,
-    sexe: null,
-    profession:null
+    sexe: null
   };
   isSuccessful = false;
   isSignUpFailed = false;
@@ -27,9 +27,9 @@ export class InscriptionPage implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, password, nom, contact, sexe, profession } = this.form;
+    const { username, email, password, nom, contact, profession, sexe } = this.form;
 
-    this.authService.register(username, email, password, nom, contact, sexe, profession).subscribe({
+    this.authService.register(username, email, password, nom, contact, profession, sexe).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
