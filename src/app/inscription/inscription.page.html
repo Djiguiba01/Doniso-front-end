@@ -13,14 +13,7 @@
 
 
 
-
-
-
-
-<!-- 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
-
-
-<div class="containeur">
+<div class="containeur" style="padding-top: 8%;">
   <div class="conteneur-logo">
     <img class="logo" src="../assets/images/logo.png">
   </div>
@@ -123,7 +116,7 @@
         maxlength="20"
         #sexe="ngModel"
         [ngClass]="{ 'is-invalid': f.submitted && sexe.errors }"
-        style="width:150px; margin-left: 1%; height: 25px; margin-top: 10px; margin-bottom: 12px;">
+        style="width:150px; margin-left: -32%; height: 37px; margin-top: 3px; margin-bottom: 20px;">
           <!-- <option selected>Genre</option> -->
           <option value="femme">Femme</option>
           <option value="homme">Homme</option>
@@ -161,8 +154,8 @@
     </div>
 
     <div class="autres-options">
-      <div style="font-size: 14px;">
-        Vous avez déjà un compte ? <span class="connexion" >Connexion</span>
+      <div style="font-size: 14px;" >
+        Vous avez déjà un compte ? <span class="connexion" routerLink="/connexion">Connexion</span>
       </div>
     </div>
 
