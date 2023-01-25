@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://localhost:8080/api/auth/';
+const AUTH_API = 'http://localhost:8089/api/auth/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,16 +25,29 @@ export class AuthService {
     );
   }
 
-  register(username: string, email: string, password: string): Observable<any> {
+  register(username: string, email: string, password: string, nom: String, profession: String, sexe: String, contact:String): Observable<any> {
+    const data = new FormData();
+    const donnee = [{
+        "username":username,
+        "nomcomplet":nom,
+         "profession":profession,
+         "sexe":sexe,
+         "email":email,
+         "password":password,
+        "contact":contact
+        
+    }]
+    data.append('data', JSON.stringify(donnee).slice(1,JSON.stringify(donnee).lastIndexOf(']')));
+
     return this.http.post(
-      AUTH_API + 'signup',
-      {
-        username,
-        email,
-        password,
-      },
-      httpOptions
-    );
+      AUTH_API + 'inscription', data);
+    //   {
+    //     username,
+    //     email,
+    //     password,
+    //   },
+    //   httpOptions
+    // );
   }
 
   logout():Observable<any>{
