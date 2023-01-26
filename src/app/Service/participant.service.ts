@@ -32,9 +32,8 @@ export class ParticipantService {
       }
 
 
-
-      AjoutParticipant(nom:any,deuxNom:any,sexe:any,contact:any,profession:any,email:any): Observable<any>{
-
+// Ajouter Participant:::::::::::::::::::::::::::::::::::::::
+     AjoutParticipant(nom:any,deuxNom:any,sexe:any,contact:any,profession:any,email:any): Observable<any>{
         let particip=
           {
             "nom": nom,
@@ -42,7 +41,8 @@ export class ParticipantService {
             "sexe": sexe,
             "contact": contact,
             "profession":profession,
-            "email": email
+            "email": email,
+           
         };
         return this.http.post(`http://localhost:8089/participant/ajout`,particip);
       }
@@ -50,3 +50,5 @@ export class ParticipantService {
       // 
 
 }
+
+ 

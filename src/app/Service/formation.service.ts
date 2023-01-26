@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Formation } from '../Class/formation';
-import { Tab1Page } from '../tab1/tab1.page';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormationService {
+
+  env = environment;
 
   constructor(private http:HttpClient) { }
 
@@ -27,8 +29,32 @@ export class FormationService {
         }
 
      // """"""""""""""""""Affiche les formations Par_ID """""""""""""
-     getFormationid(idFormat:number): Observable<Formation>{
-      return this.http.get<Formation>("http://localhost:8089/formation/voir/${idFormat}")
+     getFormationid(idFormat:number): Observable<any>{
+      return this.http.get(`${this.env.api}/utilisateur/postulantstires/${idFormat}`);
     }
+
+         // """"""""""""""""""Ajouter les formation """""""""""""
+      AjoutFormat(file:any,titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idFormat:number): Observable<any>{
+        const data: FormData = new  FormData();
+        data.append('file', file);
+        let form=[
+          {
+            "titre": titre,
+            "lieu": lieu,
+            "description": description,
+            "contact": contact,
+            "heure":heure,
+            "emailformateur": emailformateur,
+            "datedebut": datedebut,
+            "datefin": datefin, 
+            // "Etat": Etat,                                                                                                   
+        }
+      ];
+      data.append('formati', JSON.stringify(form).slice(1,JSON.stringify(form).lastIndexOf(']')));
+      return this.http.post(`${this.env.api}/formation/ajout/${idFormat}`, data);
+      }
+
+      // 
+
 
 }
