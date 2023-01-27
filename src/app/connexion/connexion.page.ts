@@ -33,6 +33,8 @@ export class ConnexionPage implements OnInit {
     this.authService.login(username, password).subscribe({
       next: data => {
         this.storageService.saveUser(data);
+        console.log(data)
+        localStorage.setItem("auth-user",JSON.stringify(data))
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;

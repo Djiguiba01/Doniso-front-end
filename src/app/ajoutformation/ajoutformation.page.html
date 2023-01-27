@@ -48,9 +48,9 @@
       </div> -->
 
       <form style="margin-top: 3%;  padding-right: 20px;"> -->
-        <select style="width:150px; margin-left: -16%; height: 25px; margin-top: 3px; margin-bottom: 20px;" >
+        <select style="width:150px; margin-left: -16%; height: 25px; margin-top: 3px; margin-bottom: 20px;" [(ngModel)]="nomformateur" [ngModelOptions]="{standalone: true}">
           <option value="Sexe">Formateur</option>
-          <option value="text"  *ngFor="let affiche of idformateurs" value="{{affiche.id}}">{{affiche.username}}</option>
+          <option value="{{affiche.username}}"  *ngFor="let affiche of formateurs" >{{affiche.username}}</option>
           <!-- <option value="0">Homme</option> -->
         </select>
       </form>

@@ -24,18 +24,22 @@ export class AjoutformationPage implements OnInit {
     Etat: any;
     tout:any
   image: any;
+  idutilisateur! : any
 
   // Formateur
-  idformateurs:any;
+  formateurs:any;
+  nomformateur! :string
 
   constructor(private formatioservice: FormationService, private formateurserv: UtilisateurService,private storageService: StorageService) {}
 
   ngOnInit() {
     // Voir id formateurs:::::::::::::::::::::
     this.formateurserv.voirFormateurformateur().subscribe(data=>{
-      this.idformateurs=data;
-      console.log(this.idformateurs);
+      this.formateurs=data;
+      console.log(this.formateurs);
     });
+    this.idutilisateur = JSON.parse(localStorage.getItem("auth-user")!).id;
+    console.log(localStorage.getItem("auth-user"))
   }
 
   // Ajout formation::::::::::::::::::::::::::::
@@ -59,7 +63,8 @@ recupererImage(event:any){
 }
   // Création méthode Sur le button formation
   Ajoutformation(){
-    this.formatioservice.AjoutFormat(this.image,this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idFormat).subscribe(data =>{
+    console.log(this.nomformateur)
+    this.formatioservice.AjoutFormat(this.image,this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idutilisateur,this.nomformateur).subscribe(data =>{
       this.tout=data;
       console.log("ajout"+this.tout)
 });

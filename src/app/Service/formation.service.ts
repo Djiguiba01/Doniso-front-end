@@ -34,7 +34,7 @@ export class FormationService {
     }
 
          // """"""""""""""""""Ajouter les formation """""""""""""
-      AjoutFormat(file:any,titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idFormat:number): Observable<any>{
+      AjoutFormat(file:any,titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idutilisateur:number, formateur:string): Observable<any>{
         const data: FormData = new  FormData();
         data.append('file', file);
         let form=[
@@ -46,12 +46,13 @@ export class FormationService {
             "heure":heure,
             "emailformateur": emailformateur,
             "datedebut": datedebut,
-            "datefin": datefin, 
+            "datefin": datefin,
             // "Etat": Etat,                                                                                                   
         }
       ];
+      data.append('formateur', formateur)
       data.append('formati', JSON.stringify(form).slice(1,JSON.stringify(form).lastIndexOf(']')));
-      return this.http.post(`${this.env.api}/formation/ajout/${idFormat}`, data);
+      return this.http.post(`${this.env.api}/formation/ajout/${idutilisateur}`, data);
       }
 
       // 
