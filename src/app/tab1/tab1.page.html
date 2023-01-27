@@ -1,16 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <!-- <ion-title></ion-title> -->
-
       <div class="entete">
 
+        <!--Entête Gauche -->
         <div class=" gauche" >
           <img src="assets/images/logo.png" alt="" style="height: 45px;">
         </div>
+
+        <!--Entête Milieu -->
         <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
-        <div class="droite" routerLink="/profilauditeur">
-           <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px;">
-          </div>
+
+        <!--Entête Droite -->
+        <div class="droite">
+        <img src="assets/images/djiguiba.jpg" alt="" style="height: 45px;" id="popover-button">
+        <!-- <ion-button id="popover-button">Open Menu</ion-button> -->
+        <ion-popover trigger="popover-button" [dismissOnSelect]="false">
+          <ng-template>
+            <ion-content>
+              <ion-list>
+                <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+                <ion-item [button]="true" [detail]="false">Option 2</ion-item>
+                <ion-item [button]="true" [detail]="false">Option 3</ion-item>
+                <!-- <ion-item [button]="true" id="nested-trigger">More options...</ion-item> -->
+
+                <ion-popover  [dismissOnSelect]="false" >
+                  <!-- <ng-template>
+                    <ion-content>
+                      <ion-list>
+                        <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                      </ion-list>
+                    </ion-content>
+                  </ng-template> -->
+                </ion-popover>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-popover>
+      </div>
 
       </div>
 
@@ -88,5 +115,18 @@
       <div class="droitebutton" routerLink="/participant">Participer</div>
     </div>
   </ion-card>
+
+  <hr>
+  <!-- <ion-button id="popover-button">Open Menu</ion-button> -->
+  <img src="assets/images/logo.png" alt="" style="height: 45px;" id="popover-button">
+
+  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+    <ng-template>
+        <ion-list>
+          <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+          <ion-item [button]="true" [detail]="false">Option 2</ion-item> 
+        </ion-list>
+    </ng-template>
+  </ion-popover>
 
 </ion-content>

@@ -13,8 +13,8 @@ export class Tab1Page {
 
   constructor( private service : FormationService) {}
 
-  // Formations en cours:::::::::::::::::
   ngOnInit(): void {
+      // Formations en cours:::::::::::::::::
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
   });
