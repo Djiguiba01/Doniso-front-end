@@ -10,19 +10,19 @@ export class UtilisateurService {
   constructor(private http:HttpClient) { }
 
   // """"""""""""""""""Affiche tout les Admin"""""""""""""
-  getFormateuradmin(): Observable<object>{
+  voirFormateuradmin(): Observable<object>{
     let valeur = "admin"
     return this.http.get(`http://localhost:8089/utlisateursecond/roles/${valeur}`)
   }
 
   // """"""""""""""""""Affiche tout les formateurs"""""""""""""
-  getFormateurform(): Observable<object>{
+  voirFormateurformateur(): Observable<object>{
     let valeur = "form"
     return this.http.get(`http://localhost:8089/utlisateursecond/roles/${valeur}`)
   }
 
     // """"""""""""""""""Affiche tout les Auditeur"""""""""""""
-    getFormateurauditeur(): Observable<object>{
+    voirFormateurauditeur(): Observable<object>{
       let valeur = " "
       return this.http.get(`http://localhost:8089/utlisateursecond/roles/${valeur}`)
     }

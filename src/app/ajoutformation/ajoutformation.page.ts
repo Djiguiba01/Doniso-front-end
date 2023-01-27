@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormationService } from '../Service/formation.service';
 import { UtilisateurService } from '../Service/utilisateur.service';
+import { StorageService } from '../_services/storage.service';
 
 @Component({
   selector: 'app-ajoutformation',
@@ -25,16 +26,20 @@ export class AjoutformationPage implements OnInit {
   image: any;
 
   // Formateur
-  formateurs:any;
+  idformateurs:any;
 
-  constructor(private service: FormationService, private idformateur: UtilisateurService) {}
+  constructor(private formatioservice: FormationService, private formateurserv: UtilisateurService,private storageService: StorageService) {}
 
   ngOnInit() {
-    this.service.getFormationencours().subscribe(data=>{
-      this.formateurs=data;
+    // Voir id formateurs:::::::::::::::::::::
+    this.formateurserv.voirFormateurformateur().subscribe(data=>{
+      this.idformateurs=data;
+      console.log(this.idformateurs);
     });
   }
 
+  // Ajout formation::::::::::::::::::::::::::::
+  currentUser: any;
   form=[
     {
       "titre": this.titre,
@@ -48,14 +53,13 @@ export class AjoutformationPage implements OnInit {
       // "Etat": Etat,                                                                                                   
   }
 ]
-
 recupererImage(event:any){
   this.image = event.target["files"][0];
   console.log(this.image)
 }
   // Création méthode Sur le button formation
   Ajoutformation(){
-    this.service.AjoutFormat(this.image,this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idFormat).subscribe(data =>{
+    this.formatioservice.AjoutFormat(this.image,this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idFormat).subscribe(data =>{
       this.tout=data;
       console.log("ajout"+this.tout)
 });
