@@ -33,7 +33,7 @@ export class AjoutformationPage implements OnInit {
   constructor(private formatioservice: FormationService, private formateurserv: UtilisateurService,private storageService: StorageService) {}
 
   ngOnInit() {
-    // Voir id formateurs:::::::::::::::::::::
+    // Voir formateurs:::::::::::::::::::::
     this.formateurserv.voirFormateurformateur().subscribe(data=>{
       this.formateurs=data;
       console.log(this.formateurs);

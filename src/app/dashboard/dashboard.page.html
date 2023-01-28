@@ -54,10 +54,10 @@
 
 <!-- Statistique -->
 <main>
-   <div class="cards">
-        <div class="card-single">
-            <div> 
-                <h2>2.000.000</h2>
+    <div class="cards" >
+        <div class="card-single" >
+            <div > 
+                <h2 >{{formateur.length}}</h2>
                 <small>Formateurs </small>
             </div>
             <div>
@@ -67,7 +67,7 @@
 
         <div class="card-single">
             <div>
-                <h2>30</h2>
+                <h2>{{auditeur.length}}</h2>
                 <small>Utilisateurs</small>
             </div>
             <div>  
@@ -112,12 +112,12 @@
 
             <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
             <div class="body-case" >
-                <div class="all-users" style="cursor: pointer;">
-                    <div class="infos" routerLink="/detailformateur">
+                <div class="all-users" style="cursor: pointer;" *ngFor="let terminer of formateur">
+                    <div class="infos" routerLink="/detailformateur" >
                         <img decoding="async" src="images/pp.jpg" width="30" height="30">
                         <div>
-                            <h4>Omar</h4>
-                            <small>Embulant</small>
+                            <h4>{{terminer.username}}</h4>
+                            <small>{{terminer.contact}}</small>
                         </div>
                     </div>
 
@@ -146,12 +146,12 @@
 
                <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
                <div class="body-case">
-                   <div class="all-users" >
+                   <div class="all-users" *ngFor="let terminer of auditeur">
                        <div class="infos" routerLink="/profilauditeur">
                            <img decoding="async" src="images/pp.jpg" width="30" height="30">
                            <div>
-                               <h4>Omar</h4>
-                               <small>Embulant</small>
+                               <h4>{{terminer.username}}</h4>
+                               <small>{{terminer.contact}}</small>
                            </div>
                        </div>
 
@@ -174,10 +174,10 @@
         <div class="card-body" style="background-color: white;">
             <p style="text-align: center; margin-top: 3%; font-weight: bold; font-size: 20px; color: teal;">Formations encours</p>
 
-         <div class="cardcont" style="margin-top: 5%; margin-bottom: 2Opx;">
-            <h5 class="card-title" style="text-align: center;">Card title</h5>
+         <div class="cardcont" style="margin-top: 5%; margin-bottom: 2Opx;" *ngFor="let encours of formationencours">
+            <h5 class="card-title" style="text-align: center;">{{encours.titre}}</h5>
             <h6 class="card-subtitle mb-2 text-muted" style="margin-left: 2%; margin-top: 3%;">Formateur: Nom</h6>
-            <p class="card-text" style="margin-left: 2%;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text" style="margin-left: 2%;">{{encours.desc}}</p>
             <div class="encours">
                 <div class="gauchecours">
                     <span class="fa-solid fa-pen-to-square"></span>
@@ -189,7 +189,7 @@
             <hr style="margin-bottom: 15px;">
          </div>
 
-         <div class="cardcont" style="margin-top: 8%; margin-bottom: 2Opx;">
+         <!-- <div class="cardcont" style="margin-top: 8%; margin-bottom: 2Opx;">
             <h5 class="card-title" style="text-align: center;">Card title</h5>
             <h6 class="card-subtitle mb-2 text-muted" style="margin-left: 2%; margin-top: 3%;">Formateur: Nom</h6>
             <p class="card-text" style="margin-left: 2%;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -202,7 +202,7 @@
                 </div>
             </div>
             <hr style="margin-bottom: 15px;">
-         </div>
+         </div> -->
 
         </div>
         

@@ -23,7 +23,7 @@ export class UtilisateurService {
 
     // """"""""""""""""""Affiche tout les Auditeur"""""""""""""
     voirFormateurauditeur(): Observable<object>{
-      let valeur = " "
+      let valeur = "audiaaaaa"
       return this.http.get(`http://localhost:8089/utlisateursecond/roles/${valeur}`)
     }
  
