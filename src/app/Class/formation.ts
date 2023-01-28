@@ -9,7 +9,7 @@ export class Formation {
     emailformateur:string |undefined; 
     datedebut:Date |undefined; 
     datefin:Date |undefined;
-    image:string |undefined; 
+    image:string |undefined;
     createur:string |undefined;
     Etat:string |undefined; 
 

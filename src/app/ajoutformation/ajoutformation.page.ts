@@ -58,13 +58,14 @@ export class AjoutformationPage implements OnInit {
   }
 ]
 recupererImage(event:any){
-  this.image = event.target["files"][0];
+  // this.image = event.target["files"][0];
+  this.image = event.target.files[0];
   console.log(this.image)
 }
   // Création méthode Sur le button formation
   Ajoutformation(){
     console.log(this.nomformateur)
-    this.formatioservice.AjoutFormat(this.image,this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idutilisateur,this.nomformateur).subscribe(data =>{
+    this.formatioservice.AjoutFormat(this.titre,this.lieu,this.description,this.contact,this.heure,this.emailformateur,this.datedebut,this.datefin,this.idutilisateur,this.nomformateur,this.image).subscribe(data =>{
       this.tout=data;
       console.log("ajout"+this.tout)
 });

@@ -34,7 +34,7 @@ export class FormationService {
     }
 
          // """"""""""""""""""Ajouter les formation """""""""""""
-      AjoutFormat(file:any,titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idutilisateur:number, formateur:string): Observable<any>{
+      AjoutFormat(titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idutilisateur:number, formateur:string,file:any): Observable<any>{
         const data: FormData = new  FormData();
         data.append('file', file);
         let form=[
@@ -46,7 +46,7 @@ export class FormationService {
             "heure":heure,
             "emailformateur": emailformateur,
             "datedebut": datedebut,
-            "datefin": datefin,
+            "datefin": datefin
             // "Etat": Etat,                                                                                                   
         }
       ];
