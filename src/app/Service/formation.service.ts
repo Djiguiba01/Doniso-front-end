@@ -25,13 +25,19 @@ export class FormationService {
 
         // """"""""""""""""""Affiche tout les formations_encours"""""""""""""
         getFormationencours(): Observable<object>{
-          return this.http.get(" http://localhost:8089/formation/regarder/encours")
+          return this.http.get("http://localhost:8089/formation/regarder/encours")
         }
 
+          // """"""""""""""""""Affiche tout les formations Terminer"""""""""""""
+          getFormationterminer(): Observable<object>{
+            return this.http.get("http://localhost:8089/formation/regarder/termine")
+          }
+
      // """"""""""""""""""Affiche les formations Par_ID """""""""""""
-     getFormationid(idFormat:number): Observable<any>{
-      return this.http.get(`${this.env.api}/utilisateur/postulantstires/${idFormat}`);
+     getFormationId(idFormat:number): Observable<Formation>{
+      return this.http.get<Formation>(`http://localhost:8089/formation/voir/${idFormat}`)
     }
+  
 
          // """"""""""""""""""Ajouter les formation """""""""""""
       AjoutFormat(titre:any,lieu:any,description:any,contact:any,heure:any,emailformateur:any ,datedebut:any,datefin:any, idutilisateur:number, formateur:string,file:any): Observable<any>{

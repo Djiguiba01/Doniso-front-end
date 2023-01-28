@@ -57,8 +57,8 @@ export class AjoutformationPage implements OnInit {
       // "Etat": Etat,                                                                                                   
   }
 ]
+// Ajout image
 recupererImage(event:any){
-  // this.image = event.target["files"][0];
   this.image = event.target.files[0];
   console.log(this.image)
 }

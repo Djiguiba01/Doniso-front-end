@@ -64,11 +64,11 @@
     <!-- 2222222222222 -->
     <ion-list *ngSwitchCase="'kittens'">
      
-      <ion-card style=" width:98%;">
-        <img src="assets/images/perfect2.png" style="height: 200px;">
+      <ion-card style=" width:98%;" *ngFor="let terminer of formationterminer">
+        <img src="../../assets/images/Back-end/{{terminer.image}}" style="height: 200px;">
       
         <ion-card-content>
-          <h2 style="font-size: 20px;">Devéloppement personnel</h2>
+          <h2 style="font-size: 20px;">{{terminer.titre}}</h2>
         </ion-card-content>
 
         <div class="touterminer">

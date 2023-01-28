@@ -8,12 +8,19 @@ import { FormationService } from '../Service/formation.service';
 })
 export class Tab1Page {
 
-  formationencours: any; // Voir tout formation
+  formationvenir: any; // Voir initier formation
+  formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID
 
   constructor( private service : FormationService) {}
 
   ngOnInit(): void {
+
+      // Formations en INITIER:::::::::::::::::
+      this.service.getFormationavenir().subscribe(data=>{
+        this.formationvenir=data;
+      });
+
       // Formations en cours:::::::::::::::::
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
