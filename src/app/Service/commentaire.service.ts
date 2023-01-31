@@ -21,4 +21,10 @@ export class CommentaireService {
       return this.http.get<Commentaire>("http://localhost:8089/commentaire/voir/${idCom}")
     }
 
+    commenter(message : string, idutilisateur : number, idformation : number) {
+      const data = new FormData();
+      data.append('description',message);
+      return this.http.post(`http://localhost:8089/commentaire/ajout/${idutilisateur}/${idformation}`,data);
+    }
+
 }
