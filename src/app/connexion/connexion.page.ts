@@ -35,10 +35,13 @@ export class ConnexionPage implements OnInit {
         this.storageService.saveUser(data);
         console.log(data)
         localStorage.setItem("auth-user",JSON.stringify(data))
+        // Id de user connecter
+        localStorage.setItem("iduser",JSON.stringify(data.id))
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
+        // La redirection de la page après connection
         this.route.navigateByUrl("/tabs")
         //this.reloadPage();
       },

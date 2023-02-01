@@ -57,7 +57,8 @@
     <div class="cards" >
         <div class="card-single" >
             <div > 
-                <h2 >{{formateur.length}}</h2>
+                <!-- {{formateur.length}} -->
+                <h2 >AAA</h2>
                 <small>Formateurs </small>
             </div>
             <div>
@@ -67,7 +68,8 @@
 
         <div class="card-single">
             <div>
-                <h2>{{auditeur.length}}</h2>
+                <!-- {{auditeur.length}} -->
+                <h2>AAA</h2>
                 <small>Utilisateurs</small>
             </div>
             <div>  
@@ -113,7 +115,7 @@
             <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
             <div class="body-case" >
                 <div class="all-users" style="cursor: pointer;" *ngFor="let terminer of formateur">
-                    <div class="infos" routerLink="/detailformateur" >
+                    <div class="infos" routerLink="/detailformateur" [routerLink]="['detailformateur', terminer.id]">
                         <img decoding="async" src="images/pp.jpg" width="30" height="30">
                         <div>
                             <h4>{{terminer.username}}</h4>
@@ -147,7 +149,7 @@
                <!-- *ngFor="let game of games | paginate:{itemsPerPage:1, currentPage:p}" -->
                <div class="body-case">
                    <div class="all-users" *ngFor="let terminer of auditeur">
-                       <div class="infos" routerLink="/profilauditeur">
+                       <div class="infos" routerLink="/profilauditeur" [routerLink]="['profilauditeur', terminer.id]">
                            <img decoding="async" src="images/pp.jpg" width="30" height="30">
                            <div>
                                <h4>{{terminer.username}}</h4>
@@ -175,15 +177,22 @@
             <p style="text-align: center; margin-top: 3%; font-weight: bold; font-size: 20px; color: teal;">Formations encours</p>
 
          <div class="cardcont" style="margin-top: 5%; margin-bottom: 2Opx;" *ngFor="let encours of formationencours">
+           <div class="but" routerLink="/detailformat" style="cursor: pointer;" [routerLink]="['detailformat',encours.idFormat]">
             <h5 class="card-title" style="text-align: center;">{{encours.titre}}</h5>
             <h6 class="card-subtitle mb-2 text-muted" style="margin-left: 2%; margin-top: 3%;">Formateur: Nom</h6>
             <p class="card-text" style="margin-left: 2%;">{{encours.desc}}</p>
+           </div>
+
             <div class="encours">
                 <div class="gauchecours">
                     <span class="fa-solid fa-pen-to-square"></span>
                 </div>
-                <div class="droitecours">
-                    <span class="fa-solid fa-eject"></span>
+                <div class="droitecours" >
+                    <!-- <span class="fa-solid fa-eject"></span> -->
+                    <select class="form-select" aria-label="Default select example" style="margin-top: 8%;">
+                        <option selected>Voir Etat</option>
+                        <option value="1">One</option>
+                      </select>
                 </div>
             </div>  
             <hr style="margin-bottom: 15px;">

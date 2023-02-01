@@ -46,8 +46,9 @@ export class DashboardPage implements OnInit {
       this.auditeur=data;
       console.log(this.auditeur);
     });
-    this.idutilisateur = JSON.parse(localStorage.getItem("auth-user")!).id;
+    this.idutilisateur = JSON.parse(localStorage.getItem("auth-user")!)[0].id;
     console.log(localStorage.getItem("auth-user"))
+    console.log(this.idutilisateur)
 
      // Formations en INITIER:::::::::::::::::
      this.format.getFormationavenir().subscribe(data=>{

@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button >
+    </ion-buttons>
+    <ion-title style="margin-left: 1%;">Demande</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="containeur">
+
+    <div class="formulaire">
+      <div class="input" style=" padding-right: 20px;">
+        <input class="telephone-input" type="text" class="form-control" placeholder="Votre structure" name="structure" [(ngModel)]="structure">
+      </div>
+
+      <div class="input" style="margin-top: 5%; padding-right: 20px;">
+        <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Votre lieu" [(ngModel)]="lieu" name="lieu">
+      </div>
+
+      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="password" placeholder="Votre email" [(ngModel)]="email" name="email">
+      </div>
+
+
+      <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email" [(ngModel)]="email" name="email">
+      </div> -->
+
+      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+        <input class="telephone-input" type="text" class="form-control"  id="password"  placeholder="Type de formation" [(ngModel)]="type" name="type">
+      </div>
+
+      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+        <input class="telephone-input" type="text" class="form-control"  id="password"  placeholder="Nombre de personnes" [(ngModel)]="personnes" name="personnes">
+      </div>
+
+      <form action=""  style="margin-left: 30%; margin-top: 3%; ">
+        <input type="file" name="image" (change)="fileChangm($event)"><br><br>
+      </form>
+
+      <!-- <form style="margin-top: 3%;  padding-right: 20px;">
+        <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;" [(ngModel)]="AuditDemand" name="AuditDemand">
+          <option value="Sexe">Genre</option>
+          <option value="1">Accepter</option>
+          <option value="0">Non_Accepter</option>
+        </select>
+      </form> -->
+
+      <div class="conteneur-submit">
+        <ion-button class="envoyer-input" type="submit" expand="block" id="open-popover"  id="open-custom-dialog">PARTICIPER</ion-button>
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- Popup:::::::::::::::::::::::::::::::: -->
+  <!-- <ion-button id="open-custom-dialog" expand="block">Open Custom Dialog</ion-button> -->
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h5 style="text-align: center;">Voullez-vous participer à cette formation</h5>
+
+        <ion-list lines="none">
+          <!-- <ion-item button="true" detail="false" (click)="modal.dismiss()" > -->
+            <div class="popuptout" (click)="modal.dismiss()" >
+              <div class="popgauche"><ion-button color="medium" style="color: teal;">Annuler</ion-button></div>
+              <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutformation()">Envoyer</ion-button></div>
+            </div>
+            <!-- <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Item 1</ion-label> -->
+          <!-- </ion-item> -->
+        </ion-list>
+
+      </div>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

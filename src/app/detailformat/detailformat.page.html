@@ -37,9 +37,9 @@
     <form action="">
       <p class="textcom">Commentaire :</p>
       <input type="text" class="input-field" placeholder="Nom"> <br><br>
-      <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage"></textarea>
+      <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage" [(ngModel)] = "message"></textarea>
         </form>
-        <button class="buttmess">Envoyer</button>
+        <button class="buttmess" (click)="commenter(message,voiridform.idFormat)">Envoyer</button>
 
         <!-- *ngFor="let game of games | paginate:{itemsPerPage:10, currentPage:p}" -->
         <div class="card" id="card2" style="width: 40rem; margin-top: 50px; margin-bottom: 45px; " >

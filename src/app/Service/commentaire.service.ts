@@ -21,6 +21,8 @@ export class CommentaireService {
       return this.http.get<Commentaire>("http://localhost:8089/commentaire/voir/${idCom}")
     }
 
+    // Ajouter commentaire
+    // Prend en compte id utilisateur et id formation
     commenter(message : string, idutilisateur : number, idformation : number) {
       const data = new FormData();
       data.append('description',message);

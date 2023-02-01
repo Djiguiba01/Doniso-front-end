@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
-  }
+  },
+    // :::::::::::::
+    {
+      path: 'detailformat/:idFormat',
+      loadChildren: () => import('../detailformat/detailformat.module').then( m => m.DetailformatPageModule)
+    },
 ];
 
 @NgModule({

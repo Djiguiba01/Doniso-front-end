@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UtilisateurService } from '../Service/utilisateur.service';
 
 @Component({
   selector: 'app-profilauditeur',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilauditeurPage implements OnInit {
 
-  constructor() { }
+  voiridutilisat:any;
+
+  constructor(private utilisat: UtilisateurService, private route:ActivatedRoute) { }
 
   ngOnInit() {
+
+    // Formations Par ID:::::::::::::::::
+      const id = +this.route.snapshot.params["id"];
+      this.utilisat.voirToutUtilisateur(id).subscribe(data=>{
+      this.voiridutilisat=data;
+    });
+
   }
 
 }

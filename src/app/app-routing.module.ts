@@ -72,7 +72,11 @@ const routes: Routes = [
   // Component
   // Par defaux
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },  {
+    path: 'demandaudit',
+    loadChildren: () => import('./demandaudit/demandaudit.module').then( m => m.DemandauditPageModule)
+  },
+
   
 
 

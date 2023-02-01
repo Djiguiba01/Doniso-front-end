@@ -23,7 +23,7 @@
   <ion-card >
     <img src="assets/images/connexion.jpg"/>
     <div class="card-title">Démander formation</div>
-    <div class="card-subtitle"><button>Soumettre</button></div>
+    <div class="card-subtitle" routerLink="/demandaudit"><button>Soumettre</button></div>
   </ion-card>
 
   <!-- :::::::::::: -->
@@ -69,11 +69,11 @@
       
         <ion-card-content>
           <h2 style="font-size: 20px;">{{terminer.titre}}</h2>
-        </ion-card-content>
+        </ion-card-content><p></p>
 
         <div class="touterminer">
 
-          <div class="gaucheterminer"><ion-icon name="eye-outline"></ion-icon></div>
+          <div class="gaucheterminer" ><ion-icon name="eye-outline" [routerLink]="['detailformat',terminer.idFormat]"></ion-icon></div>
         <div class="droiteterminer"><ion-icon name="chatbox-ellipses-outline"></ion-icon></div>
         </div>
       
