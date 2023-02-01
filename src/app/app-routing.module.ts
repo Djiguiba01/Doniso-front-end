@@ -68,17 +68,23 @@ const routes: Routes = [
     path: 'profilauditeur',
     loadChildren: () => import('./profilauditeur/profilauditeur.module').then( m => m.ProfilauditeurPageModule)
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 
   // Component
   // Par defaux
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },  {
+  // { path: 'login', component: LoginComponent },
+  {
     path: 'demandaudit',
     loadChildren: () => import('./demandaudit/demandaudit.module').then( m => m.DemandauditPageModule)
   },
-
-  
-
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
 
 ];
 @NgModule({

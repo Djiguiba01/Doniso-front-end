@@ -1,0 +1,90 @@
+
+// //La barre en haut
+ion-toolbar{
+    --background: teal;
+    color: #fff;
+    padding: 0;
+  }
+  
+  //Pour retirer la scrollbar
+  ion-content {
+    width: calc(100% + 22px);
+  }
+  
+  .entete{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .droite img{
+    width: 37px;
+    border-radius: 50%;
+  }
+  
+  // Corps Card
+  .buttonCont{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .gauchebutton, .droitebutton{
+    background-color: teal;
+    color: #fff;
+    text-align: center;
+    width: 75px;
+    height: 30px;
+    border-radius: 5px;
+    padding-top: 6px;
+    font-weight: bold;
+  }
+  
+  // :::::::::::::::::::::::::::::::::::::::::::::::::::::after
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Lobster);
+  
+  @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css);
+  
+  body {
+    background-image: url(https://subtlepatterns.com/patterns/bedge_grunge.png);
+    background-position: initial initial;
+    background-repeat: initial initial;
+  }
+  
+  .alert .close {
+    float: right;
+    font-size: 18px;
+    margin: 3px -10px 0px 0px;
+    cursor: pointer;
+  }
+  // .alert.success .inner {
+  //   border: 1px solid rgb(214,233,198);
+  //   background-color: rgb(223,240,216);
+  // }
+  
+  // @keyframes dismiss {
+  //   0% {
+  //     opacity: 1;
+  //   }
+  //   90%, 100% {
+  //     opacity: 0;
+  //     font-size: 0.1px;
+  //     transform: scale(0);
+  //   }
+  // }
+  
+  // @keyframes hide {
+  //   100% {
+  //     height: 0px;
+  //     width: 0px;
+  //     overflow: hidden;
+  //     margin: 0px;
+  //     padding: 0px;
+  //     border: 0px;
+  //   }
+  // }
+  
+  

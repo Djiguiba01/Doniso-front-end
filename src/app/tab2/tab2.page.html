@@ -10,9 +10,9 @@
         </div>
 
         <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
-        <!-- <div class="droite">
-           <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px;">
-          </div> -->
+        <div class="droite" id="open-custom-dialog">
+           <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px; cursor: pointer;">
+          </div>
       </div>
   </ion-toolbar>
   
@@ -20,103 +20,74 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card >
-    <img src="assets/images/connexion.jpg"/>
+  <ion-card  >
+    <img src="assets/images/connexion.jpg" />
     <div class="card-title">Démander formation</div>
     <div class="card-subtitle" routerLink="/demandaudit"><button>Soumettre</button></div>
   </ion-card>
 
   <!-- :::::::::::: -->
   
-<ion-header >
 
-  <ion-toolbar no-border-top >
+  <div padding>
     <ion-segment [(ngModel)]="pet">
-      <ion-segment-button value="puppies">
-        A venir
-      </ion-segment-button>
       <ion-segment-button value="kittens">
-        Terminer
+        Participation
       </ion-segment-button>
-      <ion-segment-button value="ducklings" style="margin-right: 10px;">
-        Contact
+      <ion-segment-button value="puppies">
+        Demandes
       </ion-segment-button>
     </ion-segment>
-  </ion-toolbar>
-</ion-header>
-
+  </div>
+  
   <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'puppies'">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-      
-      
-    </ion-list>
-
-    <!-- 2222222222222 -->
     <ion-list *ngSwitchCase="'kittens'">
-     
-      <ion-card style=" width:98%;" *ngFor="let terminer of formationterminer">
-        <img src="../../assets/images/Back-end/{{terminer.image}}" style="height: 200px;">
-      
-        <ion-card-content>
-          <h2 style="font-size: 20px;">{{terminer.titre}}</h2>
-        </ion-card-content><p></p>
-
-        <div class="touterminer">
-
-          <div class="gaucheterminer" ><ion-icon name="eye-outline" [routerLink]="['detailformat',terminer.idFormat]"></ion-icon></div>
-        <div class="droiteterminer"><ion-icon name="chatbox-ellipses-outline"></ion-icon></div>
-        </div>
-      
-      </ion-card>
-      
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/images/connexion.jpg">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
+      ...
     </ion-list>
-
-    <!-- 3333333333 -->
-    <ion-list *ngSwitchCase="'ducklings'">
-
-      <ion-card style="width: 99%; background-color: teal; ">
-        <ion-card-header>   
-          <ion-card-title><ion-icon name="home-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
-          <ion-card-subtitle style="color: black; font-size: 20px;">Hamdallaye ACI</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card style="width: 99%; background-color: teal; ">
-        <ion-card-header>
-          <ion-card-title><ion-icon name="call-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
-          <ion-card-subtitle style="color: black; font-size: 20px;">+223 73100973</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
-
-      
-      <ion-card style="width: 99%; background-color: teal; ">
-        <ion-card-header>  
-          <ion-card-title><ion-icon name="mail-open-outline" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
-          <ion-card-subtitle style="color: black; font-size: 20px;">djiguibabarema@gmail.com</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
-
-      <ion-card style="width: 99%; background-color: teal; ">
-        <ion-card-header>   
-          <ion-card-title><ion-icon name="logo-github" style="color: white; font-size: 45px;"></ion-icon></ion-card-title>
-          <ion-card-subtitle style="color: black; font-size: 20px;">https://github.com/Djiguiba01</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
-    
+  
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-kitten-1.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+      ...
     </ion-list>
   </div>
 
 
     
+<!-- Popup:::::::::::::::::::::::::::::::: -->
+
+<div class="toutpop">
+  <!-- <ion-button id="open-custom-dialog" expand="block">Open Custom Dialog</ion-button> -->
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog" >
+    <ng-template>
+      <div class="wrapper">
+        <!-- <h5>Dialog header</h5> -->
+
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" routerLink="/profilauditeur" (click)="modal.dismiss()" >
+            <ion-label >Profil</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()" >
+            <ion-label>Suivis</ion-label>
+          </ion-item>
+          <ion-item button="true" detail="false" (click)="modal.dismiss()" >
+            <ion-label ><button style="background-color: red; width: 100%; height: 25px; border-radius: 5px;">Déconnexion</button></ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+</div>
+
    
 </ion-content>
