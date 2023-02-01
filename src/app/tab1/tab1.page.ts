@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { FormationService } from '../Service/formation.service';
+import { AuthService } from '../_services/auth.service';
+import { StorageService } from '../_services/storage.service';
+
+
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +16,11 @@ export class Tab1Page {
   formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID
 
-  constructor( private service : FormationService) {}
+  constructor(
+    private storageService: StorageService, 
+    private authService: AuthService,
+     private service : FormationService
+     ) {}
 
   ngOnInit(): void {
 
@@ -42,6 +50,20 @@ export class Tab1Page {
     loop:true,
     spaceBetween:10,
     autoplay:true
+  }
+
+  logout(): void {
+    this.authService.logout().subscribe({
+      next: res => {
+        console.log(res);
+        this.storageService.clean();
+
+        window.location.reload();
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
   }
 
 }
