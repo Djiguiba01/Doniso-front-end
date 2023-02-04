@@ -28,7 +28,7 @@
     <ion-slide >
         <ion-card *ngFor="let venir of formationvenir">
           <img src="../../assets/images/Back-end/{{venir.image}}" alt="" srcset="">
-                  <p style="color: teal;">{{venir.description}}</p>
+                  <p style="color: teal;">{{venir.titre}}</p>
         </ion-card>
     </ion-slide>
   </ion-slides>
@@ -36,23 +36,24 @@
 
   <!-- Formations -->
   <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; margin-bottom: 7%;">Nos formations en cours</h6>
-  <ion-card *ngFor="let encours of formationencours">
+  <ion-card *ngFor="let encours of formationencours |paginate: { itemsPerPage:10, currentPage: p}">
     <img alt="Silhouette of mountains" src="../../assets/images/Back-end/{{encours.image}}"/>
     <ion-card-header>
-      <ion-card-title style="text-align: center;">{{encours.titre}}</ion-card-title>
+      <ion-card-title style="text-align: center; font-size: 13px;">{{encours.titre}}</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content>
+    <ion-card-content style="font-size: 11px;">
       {{encours.description}} 
     </ion-card-content>
 
     <!-- Button -->
-    <div class="buttonCont">
+    <div class="buttonCont" >
       <div class="gauchebutton" routerLink="/detailformat" style="cursor: pointer;" [routerLink]="['detailformat',encours.idFormat]">Voir Plus</div>
       <div class="droitebutton"  routerLink="/participant" style="cursor: pointer;">Participer</div>
     </div>
   </ion-card>
-  <hr>
+  <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
+  <hr> 
 
 <!-- Popup:::::::::::::::::::::::::::::::: -->
 

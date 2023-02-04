@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  p: number=0;
+  notif:any;
   constructor() {}
 
 }

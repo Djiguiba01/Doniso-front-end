@@ -32,7 +32,7 @@ export class DemandauditPage implements OnInit {
       console.log(this.personnes)
       // console.log(this.AuditDemand)
       console.log(this.file)
-      this.demandservice.ajoutDemandeformat(this.structure,this.lieu,this.email,this.type,this.personnes,this.file).subscribe(data =>{
+      this.demandservice.ajoutDemandeformat(this.structure,this.lieu,this.email,this.type,this.personnes,this.file,JSON.parse(localStorage.getItem("iduser")!)).subscribe(data =>{
         this.tout=data;
         console.log("ajout"+this.tout)
       });

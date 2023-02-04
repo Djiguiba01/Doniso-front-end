@@ -12,6 +12,8 @@ import { StorageService } from '../_services/storage.service';
 })
 export class Tab1Page {
 
+  p:number=0;
+
   formationvenir: any; // Voir initier formation
   formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID

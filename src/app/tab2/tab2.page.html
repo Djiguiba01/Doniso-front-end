@@ -43,10 +43,10 @@
   <div [ngSwitch]="pet">
 
     <ion-list *ngSwitchCase="'puppies'">
-      <ion-card>
+      <ion-card *ngFor="let demande of voirformatUser |paginate: { itemsPerPage:10, currentPage: p}">
         <ion-card-header>
           <!-- <ion-card-title>Card Title</ion-card-title> -->
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-subtitle>{{demande.structure}}</ion-card-subtitle>
         </ion-card-header>
       
         <!-- <ion-card-content>
@@ -54,8 +54,9 @@
         </ion-card-content> -->
       
         <ion-button fill="clear" style="color: black;">Status :</ion-button>
-        <ion-button fill="clear" style="color: teal;">Action 2</ion-button>
+        <ion-button fill="clear" style="color: teal;">{{demande.AuditDemand}}</ion-button>
       </ion-card>
+      <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
       
     </ion-list>
 

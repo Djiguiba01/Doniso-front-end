@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { DemandService } from '../Service/demand.service';
 import { FormationService } from '../Service/formation.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { FormationService } from '../Service/formation.service';
 })
 export class Tab2Page {
 
+  p: number=0;
+
   pet: string = "puppies";
   isAndroid: boolean = false;
 
@@ -16,9 +19,13 @@ export class Tab2Page {
   formationvenir: any;
   formationencours:any;
   formationterminer:any;
+  voirformatUser:any;
 
-
-  constructor(platform: Platform, private format:FormationService) {
+  constructor(
+    platform: Platform, 
+    private format:FormationService,
+    private voirdemandformat:DemandService,
+    ){
     this.isAndroid = platform.is('android'); // La Barre
   }
 
@@ -37,6 +44,11 @@ export class Tab2Page {
     // Formations en Terminer:::::::::::::::::
     this.format.getFormationterminer().subscribe(data=>{
       this.formationterminer=data;
+    });
+
+     // Formations Par Utilisateur Connecter:::::::::::::::::
+     this.voirdemandformat.VoirParUser(JSON.parse(localStorage.getItem("iduser")!)).subscribe(data=>{
+      this.voirformatUser=data;
     });
 
 // Formations Par ID:::::::::::::::::
