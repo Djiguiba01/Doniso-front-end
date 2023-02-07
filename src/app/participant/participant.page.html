@@ -30,9 +30,9 @@
         <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email" [(ngModel)]="email" name="email">
       </div>
 
-      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+      <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
         <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre contact" [(ngModel)]="contact" name="contact">
-      </div>
+      </div> -->
 
       <form style="margin-top: 3%;  padding-right: 20px;">
         <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;" [(ngModel)]="sexe" name="sexe">
@@ -43,7 +43,7 @@
       </form>
 
       <div class="conteneur-submit">
-        <ion-button class="envoyer-input" type="submit" expand="block" id="open-popover"  id="open-custom-dialog">PARTICIPER</ion-button>
+        <ion-button class="envoyer-input" type="submit" expand="block" id="open-popover"  (click)="Ajoutpart()">PARTICIPER</ion-button>
       </div>
 
     </div>
@@ -61,7 +61,7 @@
           <!-- <ion-item button="true" detail="false" (click)="modal.dismiss()" > -->
             <div class="popuptout" (click)="modal.dismiss()" >
               <div class="popgauche"><ion-button color="medium" style="color: teal;">Annuler</ion-button></div>
-              <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutpart()">Envoyer</ion-button></div>
+              <div class="popdroite"><ion-button color="medium" style="color: teal;" >Envoyer</ion-button></div>
             </div>
             <!-- <ion-icon name="person-circle"></ion-icon>
             <ion-label>Item 1</ion-label> -->

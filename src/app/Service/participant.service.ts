@@ -27,24 +27,29 @@ export class ParticipantService {
         }
 
          // """"""""""""""""""Affiche les Participants Par_ID """""""""""""
+      // getParticipantid(idPart:number): Observable<Participant>{
+      //   return this.http.get<Participant>(`http://localhost:8089/participant/voir/${idPart}`)
+      // }
+
       getParticipantid(idPart:number): Observable<Participant>{
-        return this.http.get<Participant>("http://localhost:8089/participant/voir/${idPart}")
+        return this.http.get<Participant>(`http://localhost:8089/formation/voir/${idPart}`)
       }
 
 
 // Ajouter Participant:::::::::::::::::::::::::::::::::::::::
-     AjoutParticipant(nom:any,deuxNom:any,sexe:any,contact:any,profession:any,email:any): Observable<any>{
+     AjoutParticipant(nom:any,deuxNom:any,sexe:any,profession:any,email:any,idFormat:any): Observable<any>{
+      const dat: FormData = new FormData();
         let particip=
-          {
+          [{
             "nom": nom,
             "deuxNom": deuxNom,
             "sexe": sexe,
-            "contact": contact,
             "profession":profession,
-            "email": email,
+            "email": email
            
-        };
-        return this.http.post(`http://localhost:8089/participant/ajout`,particip);
+        }];
+        dat.append('participant', JSON.stringify(particip).slice(1, JSON.stringify(particip).lastIndexOf(']')));
+        return this.http.post(`http://localhost:8089/participant/ajout/${idFormat}`,dat);
       }
 
       // 

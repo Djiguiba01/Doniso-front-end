@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FormationService } from '../Service/formation.service';
 import { ParticipantService } from '../Service/participant.service';
 
 @Component({
@@ -13,15 +15,32 @@ sexe: any;
 contact: any;
 profession: any;
 email: any;
+idFormat:any;
 tout:any;
-  constructor(private service : ParticipantService) {}
+idPart:any;
+
+voiridparticip:any;
+
+  constructor(
+    private route:ActivatedRoute,
+    private service : ParticipantService,
+    private p :FormationService
+    ) {}
 
   ngOnInit() {
+
+   // Participant Par ID:::::::::::::::::
+  const idPart = +this.route.snapshot.params["idPart"];
+  this.idFormat = +this.route.snapshot.params["idFormat"];
+  this.service.getParticipantid(idPart).subscribe(data=>{
+  this.voiridparticip=data;
+});
+
 
   }
 // Création méthode Sur le button Participation
   Ajoutpart(){
-    this.service.AjoutParticipant(this.nom,this.deuxNom,this.sexe,this.contact,this.profession,this.email).subscribe(data =>{
+    this.service.AjoutParticipant(this.nom,this.deuxNom,this.sexe,this.profession,this.email, this.idFormat).subscribe(data =>{
             this.tout=data;
             console.log("ajout"+this.tout)
   

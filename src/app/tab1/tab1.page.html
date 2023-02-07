@@ -49,7 +49,7 @@
     <!-- Button -->
     <div class="buttonCont" >
       <div class="gauchebutton" routerLink="/detailformat" style="cursor: pointer;" [routerLink]="['detailformat',encours.idFormat]">Voir Plus</div>
-      <div class="droitebutton"  routerLink="/participant" style="cursor: pointer;">Participer</div>
+      <div class="droitebutton"  routerLink="/participant" style="cursor: pointer;" [routerLink]="['participant',encours.idFormat]">Participer</div>
     </div>
   </ion-card>
   <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
