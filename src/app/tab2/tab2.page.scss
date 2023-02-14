@@ -1,72 +1,34 @@
 
+// Entête::::::::::::
+.entete{
+  display: flex;
+  justify-content: space-between;
+}
+.gauche img{
+  height: 45px;
+}
+.milieunom{
+  margin-top: 13px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.droite img{
+  height: 45px;
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
 // //La barre en haut
 ion-toolbar{
   --background: teal;
   color: #fff;
   padding: 0;
-
 }
-
-// ::after
-ion-menu::part(backdrop) {
-  background-color: rgba(255, 0, 255, 0.5);
-}
-
-ion-menu::part(container) {
-  border-radius: 0 20px 20px 0;
-
-  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
-}
-
 //Pour retirer la scrollbar
 ion-content {
-  width: calc(100% + 22px);
+  width: calc(100% + 16px);
 }
-
-.entete{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.droite img{
-  width: 37px;
-  border-radius: 50%;
-}
-
-// Popup:::::::::::::::after
-
-ion-modal#example-modal {
-  --width: fit-content;
-  --min-width: 150px;
-  --height: fit-content;
-  --border-radius: 6px;
-  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
-  margin-top: -280px !important;
-  padding-left: 43%;
-}
-
-ion-modal#example-modal h1 {
-  margin: 20px 20px 10px 20px;
-}
-
-ion-modal#example-modal ion-icon {
-
-  margin-right: 6px;
-
-  width: 48px;
-  height: 48px;
-
-  padding: 4px 0;
-
-  color: #aaaaaa;
-}
-
-ion-modal#example-modal .wrapper {
-  margin-bottom: 10px;
-}
-
-
-// Corps Card
+// Button:::::::::::after
 .buttonCont{
   display: flex;
   justify-content: space-between;
@@ -79,39 +41,50 @@ ion-modal#example-modal .wrapper {
   color: #fff;
   text-align: center;
   width: 75px;
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   padding-top: 6px;
   font-weight: bold;
 }
-// Card::::::::::::after
-.card-background-page {
 
-  ion-card {
-    position: relative;
-    text-align: center;
-    height: 30%;
-    width: 94%;
-    margin-left: -1%;
-    margin-top: 1px;
-  }
+// ::::::::after
+.toutdemand{
+  margin-top: 5px;
+  display: flex;
+  // justify-content: space-between;
+}
+.image{
+  width: 35%;
+}
+.detail{
+  margin-top: 10px;
+}
+.detail p{
+  margin-left: 10px;
+  color: white;
+  font-size: 13px;
+  line-height: 1em;
+}
 
   .card-title {
     position: absolute;
     top: 10%;
     font-size: 1.7em;
+    text-align: center;
     width: 100%;
     font-weight: bold;
-    color: teal;
+    color: white;
   }
 
   .card-subtitle {
-    font-size: 2.0em;
+    text-align: center;
+    font-size: 17px;
     position: absolute;
     top: 52%;
     width: 100%;
     color: #fff;
   }
+
   button{
     background-color: teal;
     color: #fff;
@@ -119,23 +92,7 @@ ion-modal#example-modal .wrapper {
     height: 45px;
     border-radius: 5px;
   }
-}
+//}
 
-// Card 2:::::::::::::after
-
-/* iOS places the subtitle above the title */
-//  
-
-.touterminer{
-  display: flex;
-  justify-content: space-between;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-.gaucheterminer, .droiteterminer{
-  cursor: pointer;
-  font-size: 35px;
-
-}
 
 // Contact:::::::::::::::::after

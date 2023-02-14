@@ -38,10 +38,39 @@
 
 <ion-content [fullscreen]="true">
 
-<ion-card *ngFor="let voir of Notitfcat">
-  <ion-card-content>
-{{voir.description}}
-</ion-card-content>
-</ion-card>
+<!-- Slide:::::::::::::::: -->
+  <ion-slides [options]="option" class="ion-margin-top">
+
+    <ion-slide *ngFor="let venir of formationvenir">
+
+      <ion-card class="ion-card">
+        <img src="../../assets/images/Back-end//{{venir.image}}">
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
+  <!-- Corps:::::::::::::::: -->
+  <ion-card *ngFor="let encours of formationencours ">
+    <img
+    alt="Silhouette of mountains"
+    src="../../assets/images/Back-end/{{encours.image}}" />
+    <ion-card-header>
+      <h6>qqqqqqqqqqqqqqsssssssssssssssssssss sssssssssssssssssssssssssssssss</h6>
+      <ion-card-subtitle style="font-size: 9px;">Dateaaaaaaaaa</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+
+     <!-- Button -->
+     <div class="buttonCont" >
+      <div class="gauchebutton" routerLink="/detailformat" style="cursor: pointer;" >Voir Plus</div>
+      <div class="droitebutton"  routerLink="/participant" style="cursor: pointer;" >Participer</div>
+    </div>
+  </ion-card>
+
 
 </ion-content>
+

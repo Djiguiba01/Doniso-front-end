@@ -5,8 +5,8 @@ export class Demand {
     lieu:number |undefined;
     email:string |undefined;
     type:number |undefined;
-    personnes:string |undefined; 
-    photo:string |undefined; 
-    AuditDemand:Date |undefined; 
-    
+    personnes:string |undefined;
+    photo:string |undefined;
+    auditstatus:Date |undefined;
+
 }

@@ -1,33 +1,51 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <!-- <ion-title></ion-title> -->
+     <!-- <ion-title></ion-title> -->
+     <div class="entete">
 
-      <div class="entete">
-
-
-        <div class=" gauche">
-          <img src="assets/images/logo.png" alt="" style="height: 45px;">
-        </div>
-
-        <div class="milieunom" style="margin-top: 13px; font-weight: bold; font-size: 20px;">Doniso</div>
-        <div class="droite" id="open-custom-dialog">
-           <img src="/assets/images/djiguiba.jpg" alt="" style="height: 45px; cursor: pointer;">
-          </div>
+      <!--Entête Gauche -->
+      <div class=" gauche" >
+        <img src="assets/images/logo.png" alt="" >
       </div>
+
+      <!--Entête Milieu -->
+      <div class="milieunom">Doniso</div>
+
+      <!--Entête Droite -->
+      <div class="droite" id="popover-button">
+      <img src="assets/images/djiguiba.jpg" alt="">
+      <ion-buttons slot="danger">
+        <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
+          <ng-template class="popUp">
+              <!-- <ion-list > -->
+                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
+              <!-- </ion-list> -->
+              <!-- <ion-list > -->
+                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
+              <!-- </ion-list> -->
+              <ion-list >
+                <ion-item routerLink ="/monprofil">Déconnexion</ion-item>
+              </ion-list>
+          </ng-template>
+        </ion-popover>
+      </ion-buttons>
+    </div>
+
+    </div>
+
   </ion-toolbar>
-  
 </ion-header>
 
 <ion-content class="card-background-page">
 
   <ion-card  >
     <img src="assets/images/connexion.jpg" />
-    <div class="card-title">Démander formation</div>
+    <div class="card-title" >Démander formation</div>
     <div class="card-subtitle" routerLink="/demandaudit"><button>Soumettre</button></div>
   </ion-card>
 
   <!-- :::::::::::: -->
-  
+
 
   <div padding style="background-color: teal; ">
     <ion-segment [(ngModel)]="pet">
@@ -37,27 +55,33 @@
       <ion-segment-button value="kittens">
         Participation
       </ion-segment-button>
-    </ion-segment> 
+    </ion-segment>
   </div>
-  
+
   <div [ngSwitch]="pet">
 
-    <ion-list *ngSwitchCase="'puppies'">
-      <ion-card *ngFor="let demande of voirformatUser |paginate: { itemsPerPage:10, currentPage: p}">
+    <ion-list *ngSwitchCase="'puppies'" >
+      <ion-card *ngFor="let demande of voirformatUser |paginate: { itemsPerPage:10, currentPage: p}" style="background-color: teal;">
         <ion-card-header>
           <!-- <ion-card-title>Card Title</ion-card-title> -->
-          <ion-card-subtitle>{{demande.structure}}</ion-card-subtitle>
+          <ion-card-subtitle style="color: white;">{{demande.type}}</ion-card-subtitle>
+          <div class="toutdemand">
+            <div class="image">
+              <img src="/assets/images/{{demande.photo}}" alt="" style="height: 100px; width: 100%; border-radius: 10px;">
+            </div>
+            <div class="detail">
+              <p>{{demande.structure}}</p>
+              <p>{{demande.lieu}}</p>
+              <p>{{demande.personnes}}</p>
+             </div>
+           </div>
+           <ion-button fill="clear" style="color: black;  font-size: 15px; margin-left: -6%;">Status : </ion-button>
+           <ion-button fill="clear" style="color: white; font-size: 10px; margin-left: -6%;">{{demande.auditstatus}}</ion-button>
+
         </ion-card-header>
-      
-        <!-- <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content> -->
-      
-        <ion-button fill="clear" style="color: black;">Status :</ion-button>
-        <ion-button fill="clear" style="color: teal;">{{demande.AuditDemand}}</ion-button>
       </ion-card>
       <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
-      
+
     </ion-list>
 
     <ion-list *ngSwitchCase="'kittens'">
@@ -72,11 +96,11 @@
         </ion-item>
       </ion-card>
     </ion-list>
-  
+
   </div>
 
 
-    
+
 <!-- Popup:::::::::::::::::::::::::::::::: -->
 
 <div class="toutpop">
@@ -102,5 +126,5 @@
   </ion-modal>
 </div>
 
-   
+
 </ion-content>

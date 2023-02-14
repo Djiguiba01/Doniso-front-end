@@ -17,11 +17,14 @@ export class DetailformatPage implements OnInit {
   idFormat!: number;
   resultat : any;
 
-  constructor( private route:ActivatedRoute, private formateur: UtilisateurService,
-    private service : FormationService, private commandservice : CommentaireService) { }
+  constructor(
+    private route:ActivatedRoute,
+    private formateur: UtilisateurService,
+    private service : FormationService,
+    private commandservice : CommentaireService) { }
 
   ngOnInit() {
-    
+
   // Formations Par ID:::::::::::::::::
   const idFormat = +this.route.snapshot.params["idFormat"];
   this.service.getFormationId(idFormat).subscribe(data=>{

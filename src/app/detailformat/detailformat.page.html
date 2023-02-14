@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" routerLink="/tabs" >
+    <ion-buttons slot="start" routerLink="/tabs">
       <ion-back-button defaultHref="tabs"></ion-back-button >
     </ion-buttons>
-    <ion-title style="margin-left: 1%;">Détail formation</ion-title>
+    <ion-title style="margin-left: 1%;">Detail formation</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,9 +17,7 @@
 
   <div class="toutbody" >
 
-  <img src="../../assets/images/Back-end/{{voiridform.image}}" alt="img" class="responsive" width="600" height="400">
-
-
+  <img src="../../assets/images/{{voiridform.image}}" alt="img" class="responsive" width="600" height="400">
   <h1 class="responsive-font-example">{{voiridform.titre}}</h1>
   <div class="infodesc">
   <h2 class="detail">Description : <h6></h6>{{voiridform.description}}</h2>
@@ -36,7 +34,7 @@
 
     <form action="">
       <p class="textcom">Commentaire :</p>
-      <!-- <input type="text" class="input-field" placeholder="Nom"> <br><br> --> 
+      <!-- <input type="text" class="input-field" placeholder="Nom"> <br><br> -->
       <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage" [(ngModel)] = "message"></textarea>
         </form>
         <button class="buttmess" (click)="commenter(message,voiridform.idFormat)">Envoyer</button>

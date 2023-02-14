@@ -1,88 +1,37 @@
 
+
+// Entête::::::::::::
+.entete{
+  display: flex;
+  justify-content: space-between;
+}
+.gauche img{
+  height: 45px;
+}
+.milieunom{
+  margin-top: 13px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.droite img{
+  height: 45px;
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
 // //La barre en haut
 ion-toolbar{
   --background: teal;
   color: #fff;
   padding: 0;
 }
-
 //Pour retirer la scrollbar
 ion-content {
   width: calc(100% + 22px);
 }
 
-.entete{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 1%;
-}
-.droite{
-  background-image: url("/assets/images/background.jpg");
-  width: 37px;
-  border-radius: 50%;
-  margin-right: 1%;
-}
-.droite img{
-  width: 37px;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
-// Popup:::::::::::::::after
-
-ion-modal#example-modal {
-  --width: fit-content;
-  --min-width: 150px;
-  --height: fit-content;
-  --border-radius: 6px;
-  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
-  margin-top: -280px !important;
-  padding-left: 43%;
-}
-
-ion-modal#example-modal h1 {
-  margin: 20px 20px 10px 20px;
-}
-
-ion-modal#example-modal ion-icon {
-
-  margin-right: 6px;
-
-  width: 48px;
-  height: 48px;
-
-  padding: 4px 0;
-
-  color: #aaaaaa;
-}
-
-ion-modal#example-modal .wrapper {
-  margin-bottom: 10px;
-}
-
-
-// Corps Card
-#demandformat{
-  // display: flex;
-  // justify-content: space-between;
-  background-color: teal;
-  color: #fff;
-  border-radius: 5px;
-  margin-left: 48%;
-  margin-top: 5px;
-  position: fixed;
-  z-index: 3;
-  font-size: px;
-  width: 50%;
-}
-ion-card{
-  --z-index: 2;
-}
-ion-slides{
-  --z-index: 2;
-}
-
+// Button:::::::::::after
 .buttonCont{
   display: flex;
   justify-content: space-between;
@@ -100,4 +49,64 @@ ion-slides{
   padding-top: 6px;
   font-weight: bold;
 }
+
+
+
+
+
+// ion-modal#example-modal ion-icon {
+
+//   margin-right: 6px;
+
+//   width: 48px;
+//   height: 48px;
+
+//   padding: 4px 0;
+
+//   color: #aaaaaa;
+// }
+
+// ion-modal#example-modal .wrapper {
+//   margin-bottom: 10px;
+// }
+
+
+// Corps Card
+// #demandformat{
+  // display: flex;
+  // justify-content: space-between;
+//   background-color: teal;
+//   color: #fff;
+//   border-radius: 5px;
+//   margin-left: 48%;
+//   margin-top: 5px;
+//   position: fixed;
+//   z-index: 3;
+//   font-size: px;
+//   width: 50%;
+// }
+// ion-card{
+//   --z-index: 2;
+// }
+// ion-slides{
+//   --z-index: 2;
+// }
+
+// .buttonCont{
+//   display: flex;
+//   justify-content: space-between;
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   margin-bottom: 10px;
+// }
+// .gauchebutton, .droitebutton{
+//   background-color: teal;
+//   color: #fff;
+//   text-align: center;
+//   width: 75px;
+//   height: 30px;
+//   border-radius: 5px;
+//   padding-top: 6px;
+//   font-weight: bold;
+// }
 

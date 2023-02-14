@@ -39,7 +39,7 @@ export class DemandService {
             "email": email,
             "type": type,
             "personnes":personnes,
-           
+
         }
       ];
       data.append('file',file )

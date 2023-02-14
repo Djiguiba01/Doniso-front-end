@@ -19,8 +19,9 @@ export class Tab1Page {
   formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID
 
+
   constructor(
-    private storageService: StorageService, 
+    private storageService: StorageService,
     private authService: AuthService,
      private service : FormationService,
      private particip: ParticipantService,
@@ -42,18 +43,18 @@ export class Tab1Page {
 //   this.service.getFormationid(idFormat).subscribe(data=>{
 //   this.formationVoiId=data;
 // });
- 
+
   }
 
-  
+
 
   // Slide
-  options={
-    slidesPerView:1,   // NOMBRE DE SLIDE PAR PAGE = 1
-    centeredSlider:true,
-    loop:true,
-    spaceBetween:10,
-    autoplay:true
+  option = {
+    slidesPerView: 1, // NOMBRE DE SLIDE PAR PAGE = 1
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+     autoplay:true,
   }
 
   logout(): void {

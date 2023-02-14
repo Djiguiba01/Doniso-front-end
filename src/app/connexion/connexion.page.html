@@ -21,7 +21,6 @@
       <div class="trait"></div>
 
        <form class="formconnexion"
-        *ngIf="!isLoggedIn"
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
         #f="ngForm"
@@ -48,7 +47,7 @@
         required
         minlength="6"
         #password="ngModel"
-        [ngClass]="{ 'invalide': f.submitted && password.errors }" 
+        [ngClass]="{ 'invalide': f.submitted && password.errors }"
         placeholder="Mot de passe">
       </div>
 
@@ -75,6 +74,6 @@
       </div>
 
     </div>
-  </div> 
+  </div>
 
 </ion-content>
