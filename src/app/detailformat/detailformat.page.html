@@ -40,13 +40,22 @@
         <button class="buttmess" (click)="commenter(message,voiridform.idFormat)">Envoyer</button>
 
         <!-- *ngFor="let game of games | paginate:{itemsPerPage:10, currentPage:p}" -->
-        <div class="card" id="card2" style="width: 40rem; margin-top: 50px; margin-bottom: 45px; " >
-          <div class="card-body" *ngFor="let commentaire of voiridform.commentaires">
+        <div class="card" id="card2" style="width: 40rem; margin-top: 50px; margin-bottom: 45px; " *ngFor="let commentaire of voiridform.commentaires">
+          <div class="card-body" >
             <h5 class="card-title">{{commentaire.utilisateurs.username}}</h5>
             <p class="card-text">{{commentaire.description}}</p>
-
           </div>
         </div >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
         <div class="paginat">
           <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->
         </div>

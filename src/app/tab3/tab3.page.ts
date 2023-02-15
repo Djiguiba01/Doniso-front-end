@@ -16,18 +16,13 @@ export class Tab3Page implements OnInit{
   notif:any;
   constructor(
     private noti:NotificationService,
-    private service: FormationService
   ) {}
 
   ngOnInit(): void {
+
    // Tout notifications:::::::::::::::::
    this.noti.getNotif().subscribe(data=>{
     this.Notitfcat=data;
-  });
-
-   // Formations en INITIER:::::::::::::::::
-   this.service.getFormationavenir().subscribe(data=>{
-    this.formationvenir=data;
   });
 
 }

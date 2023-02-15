@@ -12,7 +12,7 @@
       <div class="milieunom">Doniso</div>
 
       <!--Entête Droite -->
-      <div class="droite" id="popover-button">
+      <div class="droite" id="popover-button" >
       <img src="assets/images/djiguiba.jpg" alt="">
       <ion-buttons slot="danger">
         <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
@@ -52,17 +52,17 @@
 
     <ion-slide *ngFor="let venir of formationvenir">
       <ion-card >
-        <img src="../../assets/images/Back-end//{{venir.image}}">
+        <img src="../../assets/images/{{venir.image}}">
+        <h6>{{venir.titre}}</h6>
       </ion-card>
     </ion-slide>
-
   </ion-slides>
 
 
   <!-- Formations -->
   <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; margin-bottom: 7%;">Nos formations en cours</h6>
   <ion-card *ngFor="let encours of formationencours |paginate: { itemsPerPage:10, currentPage: p}">
-    <img alt="Silhouette of mountains" src="../../assets/images/Back-end/{{encours.image}}"/>
+    <img alt="Silhouette of mountains" src="../../assets/images/{{encours.image}}"/>
     <ion-card-header>
       <ion-card-title style="text-align: center; font-size: 13px;">{{encours.titre}}</ion-card-title>
     </ion-card-header>

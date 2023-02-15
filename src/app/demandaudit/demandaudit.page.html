@@ -49,8 +49,8 @@
         </select>
       </form> -->
 
-      <div class="conteneur-submit" id="open-custom-dialog">
-        <ion-button class="envoyer-input" type="submit"  id="open-popover"  >PARTICIPER</ion-button>
+      <div class="conteneur-submit" id="open-custom-dialog" >
+        <ion-button class="envoyer-input" type="submit"  id="open-popover"(click)="Ajoutformation()" >PARTICIPER</ion-button>
       </div>
 
     </div>
@@ -68,7 +68,7 @@
           <!-- <ion-item button="true" detail="false" (click)="modal.dismiss()" > -->
             <div class="popuptout" (click)="modal.dismiss()" >
               <div class="popgauche"><ion-button color="medium" style="color: teal;">Annuler</ion-button></div>
-              <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutformation()">Envoyer</ion-button></div>
+              <!-- <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutformation()" (click)="reloadPage()">Envoyer</ion-button></div> -->
             </div>
             <!-- <ion-icon name="person-circle"></ion-icon>
             <ion-label>Item 1</ion-label> -->

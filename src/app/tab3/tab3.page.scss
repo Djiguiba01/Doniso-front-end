@@ -26,7 +26,7 @@ ion-toolbar{
 }
 //Pour retirer la scrollbar
 ion-content {
-  width: calc(100% );
+  width: calc(100% + 20px);
 }
 // Button:::::::::::after
 .buttonCont{

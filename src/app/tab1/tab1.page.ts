@@ -37,16 +37,17 @@ export class Tab1Page {
       // Formations en cours:::::::::::::::::
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
+
   });
 
-  // Formations Par ID:::::::::::::::::
-//   this.service.getFormationid(idFormat).subscribe(data=>{
-//   this.formationVoiId=data;
-// });
+  //this.reloadPage();
 
   }
-
-
+  
+// Rafraîchir page:::::::::::::::::
+  reloadPage(): void {
+    window.location.reload();
+  }
 
   // Slide
   option = {
@@ -70,5 +71,6 @@ export class Tab1Page {
       }
     });
   }
+
 
 }

@@ -19,11 +19,11 @@ export class DemandauditPage implements OnInit {
   tout:any;
   file: any;
     constructor(private service : ParticipantService, private demandservice : DemandService) {}
-  
+
     ngOnInit() {
-  
+
     }
-    // Ajout 
+    // Ajout
     Ajoutformation(){
       console.log(this.structure)
       console.log(this.lieu)
@@ -32,10 +32,14 @@ export class DemandauditPage implements OnInit {
       console.log(this.personnes)
       // console.log(this.AuditDemand)
       console.log(this.file)
+
+
       this.demandservice.ajoutDemandeformat(this.structure,this.lieu,this.email,this.type,this.personnes,this.file,JSON.parse(localStorage.getItem("iduser")!)).subscribe(data =>{
         this.tout=data;
         console.log("ajout"+this.tout)
       });
+
+
     }
     // Image:::::::::::::
     fileChangm(event: any) {
@@ -43,5 +47,9 @@ export class DemandauditPage implements OnInit {
       console.log(this.file)
       }
 
+      // Rafraîchir page:::::::::::::::::
+      reloadPage(): void {
+        window.location.reload();
+      }
+
   }
-  
