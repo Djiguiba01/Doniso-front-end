@@ -18,6 +18,7 @@ export class Tab1Page {
   formationvenir: any; // Voir initier formation
   formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID
+  description: any;
 
 
   constructor(
@@ -37,13 +38,15 @@ export class Tab1Page {
       // Formations en cours:::::::::::::::::
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
+    console.log(this.formationencours)
+    
 
   });
 
   //this.reloadPage();
 
   }
-  
+
 // Rafraîchir page:::::::::::::::::
   reloadPage(): void {
     window.location.reload();

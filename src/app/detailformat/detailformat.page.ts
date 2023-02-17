@@ -16,6 +16,14 @@ export class DetailformatPage implements OnInit {
   message: any;
   idFormat!: number;
   resultat : any;
+  description: string | undefined;
+  image: string | undefined;
+  titre: string | undefined;
+  lieu: string | undefined;
+  heure: string | undefined;
+  contact: string | undefined;
+  datedebut: string | undefined;
+  datefin: string | undefined;
 
   constructor(
     private route:ActivatedRoute,
@@ -33,6 +41,16 @@ export class DetailformatPage implements OnInit {
     console.log(this.voiridform)
 
     this.idFormat = this.voiridform.id
+
+    // this.description=data.description
+    // this.image=data.description
+    // this.titre=data.description
+    // this.lieu=data.description
+    // this.heure=data.description
+    // this.contact=data.description
+    // this.datedebut=data.description
+    // this.datefin=data.description
+
 });
 
 // Commentaire Par ID:::::::::::::::::
