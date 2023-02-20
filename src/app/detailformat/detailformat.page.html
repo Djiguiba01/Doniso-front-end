@@ -10,22 +10,17 @@
 
 <ion-content>
 
-  <!-- <div class="fixe">
-    <i routerLink="/accueil" id="icon" class="fa-solid fa-arrow-left" style="font-size:25px; margin-top: 35px; margin-left: 15px;"></i>
-   <button class="valid">Valider</button>
-  </div> -->
-
   <div class="toutbody" >
 
   <img src="../../assets/images/{{voiridform.image}}" alt="img" class="responsive" width="600" height="400">
   <h1 class="responsive-font-example">{{voiridform.titre}}</h1>
   <div class="infodesc">
   <h2 class="detail">Description : <h6></h6>{{voiridform.description}}</h2>
-  <h2 class="detail">Formateur : <h6></h6></h2>
-  <h2 class="detail">Lieu :{{voiridform.lieu}} <h6></h6></h2>
-  <h2 class="detail">Heure :{{voiridform.heure}} <h6></h6></h2>
+  <h2 class="detail">Formateur : <h6> </h6>{{voiridform.idutilisateur}}</h2>
+  <h2 class="detail">Lieu : {{voiridform.lieu}} <h6></h6></h2>
+  <h2 class="detail">Heure : {{voiridform.heure}} <h6></h6></h2>
   <h2 class="detail">Contact : {{voiridform.contact}}<h6></h6></h2>
-  <h2 class="detail">Date début :{{voiridform.datedebut}} <h6></h6></h2>
+  <h2 class="detail">Date début : {{voiridform.datedebut}} <h6></h6></h2>
   <h2 class="detail">Date fin : {{voiridform.datefin}}<h6></h6></h2>
   </div>
 
@@ -35,26 +30,21 @@
     <form action="">
       <p class="textcom">Commentaire :</p>
       <!-- <input type="text" class="input-field" placeholder="Nom"> <br><br> -->
-      <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage" [(ngModel)] = "message"></textarea>
+      <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage" [(ngModel)] = "message" required="dggdgd"></textarea>
         </form>
-        <button class="buttmess" (click)="commenter(message,voiridform.idFormat)">Envoyer</button>
+        <button class="buttmess" (click)="commenter(message,voiridform.idFormat)" (click)="reloadPage()">Envoyer</button>
 
-        <!-- *ngFor="let game of games | paginate:{itemsPerPage:10, currentPage:p}" -->
-        <div class="card" id="card2" style="width: 40rem; margin-top: 50px; margin-bottom: 45px; " *ngFor="let commentaire of voiridform.commentaires">
-          <div class="card-body" >
-            <h5 class="card-title">{{commentaire.utilisateurs.username}}</h5>
-            <p class="card-text">{{commentaire.description}}</p>
-          </div>
-        </div >
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Card Title</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          </ion-card-header>
+        <ion-card *ngFor="let commentaire of voiridform.commentaires" style="background-color: #e2dbd9; margin-left: -0.5px;">
+          <!-- <ion-item> -->
+            <h6 class="card-title" style="margin-left: 12px;">
+              {{commentaire.utilisateurs.username}}
+            </h6>
 
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
+          <!-- </ion-item> -->
+          <p class="card-text" style="margin-left: 10px;">
+            {{commentaire.description}}
+          </p>
+
         </ion-card>
         <div class="paginat">
           <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->

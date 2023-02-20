@@ -14,21 +14,18 @@
       <!--Entête Droite -->
       <div class="droite" id="popover-button">
       <img src="assets/images/djiguiba.jpg" alt="">
-      <ion-buttons slot="danger">
+      <!-- <ion-buttons slot="danger">
         <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
           <ng-template class="popUp">
-              <!-- <ion-list > -->
                 <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
-              <!-- <ion-list > -->
+
                 <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
               <ion-list >
                 <ion-item routerLink ="/monprofil">Déconnexion</ion-item>
               </ion-list>
           </ng-template>
         </ion-popover>
-      </ion-buttons>
+      </ion-buttons> -->
     </div>
 
     </div>
@@ -38,11 +35,20 @@
 
 <ion-content class="card-background-page">
 
-  <!-- <ion-card  style="margin-right: 30px;">
-    <img src="assets/images/connexion.jpg" />
-    <div class="card-title" >Démander formation</div>
-    <div class="card-subtitle" routerLink="/demandaudit"><button>Soumettre</button></div>
-  </ion-card> -->
+<!-- :::::::::::::::::: --> 
+<ion-popover trigger="popover-button" [dismissOnSelect]="true" color="danger">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+        <ion-item [button]="true" [detail]="false">Option 2</ion-item>
+        <ion-item [button]="true" >More options...</ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
+  <!-- ::::::::: -->
 
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="assets/images/cours.jpg" alt="Card image cap">
@@ -92,7 +98,7 @@
 
         </ion-card-header>
       </ion-card>
-      <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
+      <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->
 
     </ion-list>
 

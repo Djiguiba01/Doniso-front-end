@@ -1,4 +1,4 @@
-<!-- 
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -60,7 +60,7 @@
       minlength="3"
       maxlength="20"
       #nom="ngModel"
-      [ngClass]="{ 'is-invalid': f.submitted && nom.errors }" 
+      [ngClass]="{ 'is-invalid': f.submitted && nom.errors }"
       placeholder="Nom complet">
     </div>
 
@@ -74,10 +74,10 @@
       minlength="3"
       maxlength="20"
       #profession="ngModel"
-      [ngClass]="{ 'is-invalid': f.submitted && profession.errors }" 
+      [ngClass]="{ 'is-invalid': f.submitted && profession.errors }"
       placeholder="profession">
     </div>
-    
+
      <!-- Contact -->
      <div class="input">
       <input type="text"
@@ -88,7 +88,7 @@
       minlength="3"
       maxlength="20"
       #contact="ngModel"
-      [ngClass]="{ 'is-invalid': f.submitted && contact.errors }" 
+      [ngClass]="{ 'is-invalid': f.submitted && contact.errors }"
       placeholder="contact">
     </div>
 
@@ -116,7 +116,7 @@
         maxlength="20"
         #sexe="ngModel"
         [ngClass]="{ 'is-invalid': f.submitted && sexe.errors }"
-        style="width:150px; margin-left: -32%; height: 37px; margin-top: 3px; margin-bottom: 20px;">
+        style="width:150px; margin-left: -25%; height: 37px; margin-top: 3px; margin-bottom: 20px;">
           <!-- <option selected>Genre</option> -->
           <option value="femme">Femme</option>
           <option value="homme">Homme</option>
@@ -127,6 +127,10 @@
     <label for="myfile" style="font-weight: bold;">Photo</label>
     <input type="file" name="photo"><br><br>
   </form> -->
+
+  <form action=""  style="margin-left: 49%; ">
+    <input type="file" name="file" (change)="fileChangm($event)"><br><br>
+  </form>
 
 
   <!-- Mot de passe -->
@@ -163,6 +167,6 @@
 
 </form>
 <!-- ::::::::::::::::::::::::::::::: -->
-</div> 
+</div>
 
 </ion-content>

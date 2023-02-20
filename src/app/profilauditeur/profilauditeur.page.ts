@@ -17,7 +17,7 @@ export class ProfilauditeurPage implements OnInit {
 
     // Formations Par ID:::::::::::::::::
       const id = +this.route.snapshot.params["id"];
-      this.utilisat.voirToutUtilisateur(id).subscribe(data=>{
+      this.utilisat.voirUtilisateurId(id).subscribe(data=>{
       this.voiridutilisat=data;
     });
 

@@ -36,20 +36,9 @@ export class DetailformatPage implements OnInit {
   // Formations Par ID:::::::::::::::::
   const idFormat = +this.route.snapshot.params["idFormat"];
   this.service.getFormationId(idFormat).subscribe(data=>{
-
     this.voiridform = data
     console.log(this.voiridform)
-
     this.idFormat = this.voiridform.id
-
-    // this.description=data.description
-    // this.image=data.description
-    // this.titre=data.description
-    // this.lieu=data.description
-    // this.heure=data.description
-    // this.contact=data.description
-    // this.datedebut=data.description
-    // this.datefin=data.description
 
 });
 
@@ -61,12 +50,18 @@ export class DetailformatPage implements OnInit {
 
 }
 
+ // Rafraîchir page:::::::::::::::::
+ reloadPage(): void {
+  window.location.reload();
+}
+
 // Méthode ajout connecter au button
 commenter(message : string, idf : number) {
   // il prend en compte  id de user(idser) connecter et id(idf) de la formation
   this.commandservice.commenter(message,JSON.parse(localStorage.getItem("iduser")!),idf).subscribe(data => {
     this.resultat = data;
-  })
+  });
+
 }
 
 }

@@ -28,8 +28,13 @@ export class DemandService {
     return this.http.get(`http://localhost:8089/demandpart/voirformation/${idDemand}`)
   }
 
+   // """"""""""""""""""Afficher tout Etat Demande formation"""""""""""""
+   VoirTypeDemand(): Observable<object>{
+    return this.http.get("http://localhost:8089/demandpart/typedemande")
+  }
+
       // """"""""""""""""""Ajouter demande formation par user """""""""""""
-      ajoutDemandeformat(structure:any,lieu:any,email:any,type:any,personnes:any, file:any,iduser : number): Observable<any>{
+      ajoutDemandeformat(structure:any,lieu:any,email:any,type:any,personnes:any,etatligne:any, file:any,iduser : number): Observable<any>{
         const data: FormData = new  FormData();
         // data.append('file', file);
         let form=[
@@ -39,6 +44,7 @@ export class DemandService {
             "email": email,
             "type": type,
             "personnes":personnes,
+            "etatligne":etatligne
 
         }
       ];

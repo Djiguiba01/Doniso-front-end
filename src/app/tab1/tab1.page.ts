@@ -19,6 +19,8 @@ export class Tab1Page {
   formationencours: any; // Voir encours formation
   formationVoiId: any; // Voir Par ID
   description: any;
+  role: any;
+  route: any;
 
 
   constructor(
@@ -26,20 +28,41 @@ export class Tab1Page {
     private authService: AuthService,
      private service : FormationService,
      private particip: ParticipantService,
-     ) {}
+     ) {
+
+
+
+     }
+
+// Déconnexion
+     logout(): void {
+      this.authService.logout().subscribe({
+        next: res => {
+          console.log(res);
+          this.storageService.clean();
+          this.route.navigate('/connexion')
+        },
+        error: err => {
+          console.log(err);
+        }
+      });
+    }
+
 
   ngOnInit(): void {
 
       // Formations en INITIER:::::::::::::::::
       this.service.getFormationavenir().subscribe(data=>{
         this.formationvenir=data;
+        this.role=this.storageService.getUser().roles
+        console.log(this.role)
       });
 
       // Formations en cours:::::::::::::::::
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
     console.log(this.formationencours)
-    
+
 
   });
 
@@ -61,19 +84,6 @@ export class Tab1Page {
      autoplay:true,
   }
 
-  logout(): void {
-    this.authService.logout().subscribe({
-      next: res => {
-        console.log(res);
-        this.storageService.clean();
-
-        window.location.reload();
-      },
-      error: err => {
-        console.log(err);
-      }
-    });
-  }
 
 
 }

@@ -15,28 +15,45 @@ export class DemandauditPage implements OnInit {
   email: any;
   type: any;
   personnes: any;
-  // file:any;
+  etatligne: any;
   tout:any;
   file: any;
-    constructor(private service : ParticipantService, private demandservice : DemandService) {}
+
+  Demandetype:any;
+
+    // Méthode pour vider le champs lors d'ajout
+    form1(){
+      this.structure= '',
+      this.lieu = '',
+      this.email= '',
+      this.type= '',
+      this.personnes= '',
+      this.etatligne= '',
+      this.file= ''
+    }
+
+    constructor(
+      private service : ParticipantService,
+      private demandservice : DemandService
+      ) {}
 
     ngOnInit() {
+
+      // Voir Tout les Demandes Accepter:::::::::::::::::::::
+    this.demandservice.VoirTypeDemand().subscribe((data) => {
+      this.Demandetype = data;
+    });
 
     }
     // Ajout
     Ajoutformation(){
-      console.log(this.structure)
-      console.log(this.lieu)
-      console.log(this.email)
-      console.log(this.type)
-      console.log(this.personnes)
-      // console.log(this.AuditDemand)
-      console.log(this.file)
-
-
-      this.demandservice.ajoutDemandeformat(this.structure,this.lieu,this.email,this.type,this.personnes,this.file,JSON.parse(localStorage.getItem("iduser")!)).subscribe(data =>{
+      // console.log(this.structure)
+      // Méthode d'ajout Participant
+      this.demandservice.ajoutDemandeformat(this.structure,this.lieu,this.email,this.type,this.personnes,this.etatligne,this.file,JSON.parse(localStorage.getItem("iduser")!)).subscribe(data =>{
         this.tout=data;
         console.log("ajout"+this.tout)
+        // Vider le champs Quand on clique sur button
+        this.form1();
       });
 
 

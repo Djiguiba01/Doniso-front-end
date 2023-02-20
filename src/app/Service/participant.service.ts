@@ -36,6 +36,8 @@ export class ParticipantService {
       }
 
 
+
+
 // Ajouter Participant:::::::::::::::::::::::::::::::::::::::
      AjoutParticipant(nom:any,deuxNom:any,sexe:any,profession:any,email:any,idFormat:any): Observable<any>{
       const dat: FormData = new FormData();
@@ -46,14 +48,13 @@ export class ParticipantService {
             "sexe": sexe,
             "profession":profession,
             "email": email
-           
+
         }];
         dat.append('participant', JSON.stringify(particip).slice(1, JSON.stringify(particip).lastIndexOf(']')));
         return this.http.post(`http://localhost:8089/participant/ajout/${idFormat}`,dat);
       }
 
-      // 
+      //
 
 }
 
- 

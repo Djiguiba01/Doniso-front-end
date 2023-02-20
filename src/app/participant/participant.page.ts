@@ -21,6 +21,16 @@ idPart:any;
 
 voiridparticip:any;
 
+  // Méthode pour vider le champs lors d'ajout
+  form1(){
+    this.nom= '',
+    this.deuxNom = '',
+    this.sexe= '',
+    this.contact= '',
+    this.profession= '',
+    this.email= ''
+  }
+
   constructor(
     private route:ActivatedRoute,
     private service : ParticipantService,
@@ -43,7 +53,9 @@ voiridparticip:any;
     this.service.AjoutParticipant(this.nom,this.deuxNom,this.sexe,this.profession,this.email, this.idFormat).subscribe(data =>{
             this.tout=data;
             console.log("ajout"+this.tout)
-  
+
+            this.form1();
     });
+    // Vider le champs Quand on clique sur button
   }
 }

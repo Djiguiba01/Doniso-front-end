@@ -3,7 +3,7 @@
 ion-content {
     width: calc(100% + 22px);
   }
-  
+
   //La barre en haut
   // Entête
   ion-toolbar{
@@ -11,25 +11,25 @@ ion-content {
     color: #fff;
     padding: 0;
   }
-  
+
   //le titre de la barre
   ion-title{
     font-size: 15px;
   }
-  
+
   .containeur{
-    padding-top: 18%;
-  
+    padding-top: 12%;
+
   }
-  
-  
+
+
   .input{
     margin: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
-  
+
   //le conteneur de mon formullaire
   .formulaire{
     display: flex;
@@ -39,12 +39,12 @@ ion-content {
     gap: 10px;
     margin-bottom: 30px;
   }
-  
+
   //le champ numero de telephone
   .telephone-input{
     border: 1px solid rgba(0, 0, 0, 0.12);
   }
-  
+
   //le button envoyer
   .envoyer-input{
     --background: teal;
@@ -52,11 +52,11 @@ ion-content {
     border-radius: 15px;
     width: 90%;
   }
-  
+
   .obligatoire{
     color: red;
   }
-  
+
   .input{
     font-weight: bold;
   }
@@ -67,16 +67,16 @@ ion-content {
     display: flex;
     justify-content: center;
   }
-  
+
   .connexion{
     color: teal;
     font-weight: bold;
   }
-  
+
   .connexion:hover{
     cursor: pointer;
   }
-  
+
   // Popup:::::::::::::::after
   ion-modal#example-modal {
     --width: fit-content;
@@ -85,22 +85,22 @@ ion-content {
     --border-radius: 6px;
     --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
   }
-  
+
   ion-modal#example-modal h1 {
     margin: 20px 20px 10px 20px;
   }
-  
+
   ion-modal#example-modal ion-icon {
     margin-right: 6px;
-  
+
     width: 48px;
     height: 48px;
-  
+
     padding: 4px 0;
-  
+
     color: #aaaaaa;
   }
-  
+
   ion-modal#example-modal .wrapper {
     margin-bottom: 10px;
   }
@@ -108,13 +108,12 @@ ion-content {
   display: flex;
   justify-content: space-between;
   }
-  
+
   .popdroite{
     margin-left: 10%;
   }
   .popuptout ion-button{
     height: 35px;
   }
-  
-  
-  
+
+

@@ -7,6 +7,7 @@ export class Demand {
     type:number |undefined;
     personnes:string |undefined;
     photo:string |undefined;
+    DemandLigne:string |undefined;
     auditstatus:Date |undefined;
 
 }

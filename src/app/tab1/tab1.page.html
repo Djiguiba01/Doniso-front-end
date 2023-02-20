@@ -1,3 +1,4 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
 <ion-header>
   <ion-toolbar>
      <!-- <ion-title></ion-title> -->
@@ -12,23 +13,23 @@
       <div class="milieunom">Doniso</div>
 
       <!--Entête Droite -->
-      <div class="droite" id="popover-button" >
-      <img src="assets/images/djiguiba.jpg" alt="">
-      <ion-buttons slot="danger">
+      <div class="droite" id="popover-button">
+      <img src="assets/images/djiguiba.jpg" alt="" >
+      <!-- <ion-buttons slot="danger">
         <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
           <ng-template class="popUp">
-              <!-- <ion-list > -->
-                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
-              <!-- <ion-list > -->
-                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
               <ion-list >
-                <ion-item routerLink ="/monprofil">Déconnexion</ion-item>
+                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
+              </ion-list>
+              <ion-list >
+                <ion-item routerLink ="/monprofil" *ngIf="role=='ROLE_FORMATEUR'">Mes cours</ion-item>
+              </ion-list>
+              <ion-list >
+                <ion-item routerLink="/connexion">Déconnexion</ion-item>
               </ion-list>
           </ng-template>
         </ion-popover>
-      </ion-buttons>
+      </ion-buttons> -->
     </div>
 
     </div>
@@ -36,7 +37,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content >
+
+
+
+<!-- :::::::::::::::::: -->
+<!-- <ion-button id="popover-button"   color="danger">Open Menu</ion-button> -->
+<ion-popover trigger="popover-button" [dismissOnSelect]="true" color="danger">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false" routerLink="/profilauditeur">Mon profil</ion-item>
+        <ion-item [button]="true" [detail]="false" *ngIf="role=='ROLE_FORMATEUR'" routerLink="/formationformateur">Mes cours</ion-item>
+        <ion-item [button]="true" [detail]="false">Déconnexion</ion-item>
+        <!-- <ion-item [button]="true" >More options...</ion-item> -->
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
+  <!-- ::::::::: -->
 
   <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal;">Formation à venir </h6>
   <!-- <ion-slides [options]="options">
@@ -77,8 +97,7 @@
       <div class="droitebutton"  routerLink="/participant" style="cursor: pointer;" [routerLink]="['participant',encours.idFormat]">Participer</div>
     </div>
   </ion-card>
-  <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls>
-  <hr>
+  <!-- <pagination-controls (pageChange)="p =$event"previousLabel="Précédent" nextLabel="Suivant" style="text-align: center; color: teal;"></pagination-controls> -->
 
 <!-- Popup:::::::::::::::::::::::::::::::: -->
 
@@ -104,7 +123,6 @@
     </ng-template> -->
   </ion-modal>
 </div>
-
 
 
 </ion-content>

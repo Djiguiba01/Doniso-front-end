@@ -5,13 +5,14 @@ export class Formation {
     lieu:number |undefined;
     description:string |undefined;
     contact:number |undefined;
-    heure:string |undefined; 
-    emailformateur:string |undefined; 
-    datedebut:Date |undefined; 
+    heure:string |undefined;
+    emailformateur:string |undefined;
+    datedebut:Date |undefined;
     datefin:Date |undefined;
     image:string |undefined;
     createur:string |undefined;
-    Etat:string |undefined; 
+    Etat:string |undefined;
+    formateur:string |undefined;
 
 
 }

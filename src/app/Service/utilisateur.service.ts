@@ -7,6 +7,9 @@ import { Utilisateur } from '../Class/utilisateur';
   providedIn: 'root'
 })
 export class UtilisateurService {
+  VoirToutEtat() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http:HttpClient) { }
 
@@ -29,8 +32,10 @@ export class UtilisateurService {
     }
 
      // """"""""""""""""""Affiche les Utilisateurs Par_ID """""""""""""
-     voirToutUtilisateur(id:number): Observable<Utilisateur>{
+     voirUtilisateurId(id:number): Observable<Utilisateur>{
       return this.http.get<Utilisateur>(`http://localhost:8089/utlisateursecond/voir/${id}`)
     }
- 
+
+
+
 }

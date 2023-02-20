@@ -16,9 +16,9 @@
         <input class="telephone-input" type="text" class="form-control" placeholder="Votre structure" name="structure" [(ngModel)]="structure">
       </div>
 
-      <div class="input" style="margin-top: 5%; padding-right: 20px;">
+      <!-- <div class="input" style="margin-top: 5%; padding-right: 20px;">
         <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Votre lieu" [(ngModel)]="lieu" name="lieu">
-      </div>
+      </div> -->
 
       <div class="input" style="margin-top: 5%;  padding-right: 20px;">
         <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="password" placeholder="Votre email" [(ngModel)]="email" name="email">
@@ -37,7 +37,15 @@
         <input class="telephone-input" type="text" class="form-control"  id="password"  placeholder="Nombre de personnes" [(ngModel)]="personnes" name="personnes">
       </div>
 
-      <form action=""  style="margin-left: 30%; margin-top: 3%; ">
+      <form style="margin-top: 3%;  padding-right: 20px;">
+        <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;" [(ngModel)]="etatligne" name="sexe">
+          <option value="Sexe">Choisissez le lieu :</option>
+          <option value="0">Présidentiell</option>
+          <option value="1">En_ligne</option>
+        </select>
+      </form>
+
+      <form action=""  style="margin-left: 53%; margin-top: 3%; ">
         <input type="file" name="image" (change)="fileChangm($event)"><br><br>
       </form>
 
@@ -50,7 +58,7 @@
       </form> -->
 
       <div class="conteneur-submit" id="open-custom-dialog" >
-        <ion-button class="envoyer-input" type="submit"  id="open-popover"(click)="Ajoutformation()" >PARTICIPER</ion-button>
+        <ion-button class="envoyer-input" type="submit"  id="open-popover" >PARTICIPER</ion-button>
       </div>
 
     </div>
@@ -68,7 +76,7 @@
           <!-- <ion-item button="true" detail="false" (click)="modal.dismiss()" > -->
             <div class="popuptout" (click)="modal.dismiss()" >
               <div class="popgauche"><ion-button color="medium" style="color: teal;">Annuler</ion-button></div>
-              <!-- <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutformation()" (click)="reloadPage()">Envoyer</ion-button></div> -->
+              <div class="popdroite"><ion-button color="medium" style="color: teal;" (click)="Ajoutformation()" (click)="reloadPage()">Envoyer</ion-button></div>
             </div>
             <!-- <ion-icon name="person-circle"></ion-icon>
             <ion-label>Item 1</ion-label> -->

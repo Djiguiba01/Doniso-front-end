@@ -14,21 +14,17 @@
       <!--Entête Droite -->
       <div class="droite" id="popover-button">
       <img src="assets/images/djiguiba.jpg" alt="">
-      <ion-buttons slot="danger">
+      <!-- <ion-buttons slot="danger">
         <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
           <ng-template class="popUp">
-              <!-- <ion-list > -->
                 <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
-              <!-- <ion-list > -->
                 <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <!-- </ion-list> -->
               <ion-list >
                 <ion-item routerLink ="/monprofil">Déconnexion</ion-item>
               </ion-list>
           </ng-template>
         </ion-popover>
-      </ion-buttons>
+      </ion-buttons> -->
     </div>
 
     </div>
@@ -36,7 +32,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content >
+
+  <!-- :::::::::::::::::: -->
+<!-- <ion-button id="popover-button"   color="danger">Open Menu</ion-button> -->
+<ion-popover trigger="popover-button" [dismissOnSelect]="true" color="danger">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+        <ion-item [button]="true" [detail]="false">Option 2</ion-item>
+        <!-- <ion-item [button]="true" >More options...</ion-item> -->
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
+  <!-- ::::::::: -->
 
 <ion-card *ngFor="let voir of Notitfcat">
   <ion-card-content>
