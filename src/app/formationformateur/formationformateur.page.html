@@ -1,15 +1,60 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>formationformateur</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="formationformateur"></ion-back-button >
+    </ion-buttons>
+    <ion-title style="margin-left: 1%;">Participation</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1>{{voirformation.formations[0].titre}}</h1>
+<ion-content >
+  <!-- <h1>{{voirformation ?.formations[0].titre}}</h1> -->
 <!-- <table>
   <th>Formation</th>
    <td  *ngFor="let formation of voirformation.formations">
     <tr>{{formation.titre}}</tr>
   </td>
 </table> -->
+
+<ion-list >
+<ion-card *ngFor="let formation of voirformation?.formations">
+  <ion-card-header>
+    <ion-card-subtitle>{{formation.titre}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content style="margin-top: -15px;">
+    <img src="../../assets/images/{{formation.image}}" alt="" style="height: 90px; width: 100%;">
+  </ion-card-content>
+  <div class="buttone" style="display: flex; justify-content: space-between; margin-top: 5%;">
+    <p style="margin-left: 2%; color: rgb(160, 62, 62); font-size: 12px;">{{formation.etat}}</p>
+    <div class="button" style="width: 31%; ">
+      <button 
+        style="background-color: teal;
+        width:80%; color: white; height: 25px;
+        border-radius: 5px; font-weight: bold;"
+      (click)=" ModifierEtat(formation.idFormat) ">Valider
+      </button>
+    </div>
+  </div>
+</ion-card>
+</ion-list>
+
+<!-- Popup:::::::::::::::::::::::::::::::: -->
+  <!-- <ion-button id="open-custom-dialog" expand="block">Open Custom Dialog</ion-button> -->
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog" >
+    <ng-template>
+      <div class="wrapper">
+        <h5 style="text-align: center;">Voullez-vous participer à cette formation</h5>
+
+        <ion-list lines="none" >
+          <!-- <ion-item button="true" detail="false" (click)="modal.dismiss()" > -->
+            <div class="popuptout" (click)="modal.dismiss()" >
+              <div class="popgauche"><ion-button color="medium" style="color: teal;">Annuler</ion-button></div>
+              <div class="popdroite"><ion-button color="medium" style="color: teal;">Confirmer</ion-button></div>
+            </div>
+        </ion-list>
+
+      </div>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

@@ -63,6 +63,13 @@ export class FormationService {
       }
 
       //
+       // """"""""""""""""""Mettre Etats Formations Encours """""""""""""
+     postFormationstatus(idFormat:number,formationstatus:string): Observable<Formation>{
+      return this.http.post<Formation>(`http://localhost:8089/formation/TERMINER/${idFormat}`,formationstatus)
+    }
 
-
+    // """"""""""""""""""Afficher Lieu  formation"""""""""""""
+    VoirLieuFormation(): Observable<object>{
+    return this.http.get("http://localhost:8089/formation/lieuformation")
+  }
 }

@@ -23,7 +23,11 @@ const routes: Routes = [
         path: 'formateur',
         loadChildren: () => import('../formateur/formateur.module').then( m => m.FormateurPageModule)
       },
-
+      {
+        path: 'formationformateur',
+        loadChildren: () => import('../formationformateur/formationformateur.module').then( m => m.FormationformateurPageModule)
+      },
+ 
       // {
       //   path: 'accueil',
       //   loadChildren: () => import('../accueil/accueil.module').then( m => m.AccueilPageModule)

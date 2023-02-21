@@ -45,7 +45,6 @@ export class DemandService {
             "type": type,
             "personnes":personnes,
             "etatligne":etatligne
-
         }
       ];
       data.append('file',file )

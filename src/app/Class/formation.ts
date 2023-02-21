@@ -14,5 +14,4 @@ export class Formation {
     Etat:string |undefined;
     formateur:string |undefined;
 
-
 }

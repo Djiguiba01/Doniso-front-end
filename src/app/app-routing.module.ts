@@ -84,12 +84,13 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
-  },  {
+  },
+  {
     path: 'formationformateur',
     loadChildren: () => import('./formationformateur/formationformateur.module').then( m => m.FormationformateurPageModule)
   },
 
- 
+
 
 
 
