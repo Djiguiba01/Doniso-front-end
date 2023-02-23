@@ -12,6 +12,7 @@ export class FormationformateurPage implements OnInit {
   voirformation: any;
   format: any;
   etatformation: any;
+  formatformateur:any;
 
   constructor(
     private user: UtilisateurService,
@@ -19,6 +20,11 @@ export class FormationformateurPage implements OnInit {
   ) {}
 
   ngOnInit() {
+
+     // Formation formateurs:::::::::::::::::
+     this.service.EtatFormationFormateur().subscribe(data=>{
+      this.formatformateur=data;
+    });
 
     this.lesFormations();
     // Formations Par ID:::::::::::::::::
@@ -44,7 +50,7 @@ export class FormationformateurPage implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.service
-          .postFormationstatus(formation, statusformation)
+          .postFormationFormateur(formation, statusformation)
           .subscribe((data) => {
             this.etatformation = data;
             // if(data.status == true){

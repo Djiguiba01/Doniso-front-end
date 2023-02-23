@@ -9,5 +9,4 @@ export class Demand {
     photo:string |undefined;
     DemandLigne:string |undefined;
     auditstatus:Date |undefined;
-
 }

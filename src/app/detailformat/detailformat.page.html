@@ -16,9 +16,9 @@
   <h1 class="responsive-font-example">{{voiridform.titre}}</h1>
   <div class="infodesc">
   <h2 class="detail">Description : <h6></h6>{{voiridform.description}}</h2>
-  <h2 class="detail">Formateur : <h6> </h6>{{voiridform.idutilisateur}}</h2>
-  <h2 class="detail">Lieu : {{voiridform.lieu}} <h6></h6></h2>
-  <h2 class="detail">Heure : {{voiridform.heure}} <h6></h6></h2>
+  <!-- <h2 class="detail">Formateur : <h6> </h6>{{voiridform.Utilisateurs}}</h2> -->
+  <h2 class="detail">Lieu : {{voiridform.etatlieu}} <h6></h6></h2>
+  <h2 class="detail">Heure : {{voiridform.heuretemps}} <h6></h6></h2>
   <h2 class="detail">Contact : {{voiridform.contact}}<h6></h6></h2>
   <h2 class="detail">Date début : {{voiridform.datedebut}} <h6></h6></h2>
   <h2 class="detail">Date fin : {{voiridform.datefin}}<h6></h6></h2>
@@ -32,7 +32,7 @@
       <!-- <input type="text" class="input-field" placeholder="Nom"> <br><br> -->
       <textarea name="text" id="textareatext" cols="30" rows="10" placeholder="Messasage" [(ngModel)] = "message" required="dggdgd"></textarea>
         </form>
-        <button class="buttmess" (click)="commenter(message,voiridform.idFormat)" (click)="reloadPage()">Envoyer</button>
+        <button class="buttmess" (click)="commenter(message,voiridform.idFormat)">Envoyer</button>
 
         <ion-card *ngFor="let commentaire of voiridform.commentaires" style="background-color: #e2dbd9; margin-left: -0.5px;">
           <!-- <ion-item> -->
