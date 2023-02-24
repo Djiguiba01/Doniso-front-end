@@ -78,12 +78,4 @@ export class FormationformateurPage implements OnInit {
     });
   }
 }
-// console.log("id ----- "+formation)
-// const statusformation =formation.etat
-// console.log("status ----- "+statusformation)
-// Changement Etat  Formation:::::::::::::::::
-// this.service.postFormationstatus(formation,statusformation).subscribe(data=>{
-//   this.etatformation=data;
-//   console.log("idZZ ----- "+formation)
 
-// });

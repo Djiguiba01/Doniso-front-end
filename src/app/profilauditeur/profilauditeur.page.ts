@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UtilisateurService } from '../Service/utilisateur.service';
+import { AuthService } from '../_services/auth.service';
+import { StorageService } from '../_services/storage.service';
 
 @Component({
   selector: 'app-profilauditeur',
@@ -10,16 +12,23 @@ import { UtilisateurService } from '../Service/utilisateur.service';
 export class ProfilauditeurPage implements OnInit {
 
   voiridutilisat:any;
+  user: any;
 
-  constructor(private utilisat: UtilisateurService, private route:ActivatedRoute) { }
+  constructor(
+    private storageService: StorageService,
+    private utilisat: UtilisateurService,
+    private route:ActivatedRoute
+    ) { }
 
   ngOnInit() {
 
     // Formations Par ID:::::::::::::::::
       const id = +this.route.snapshot.params["id"];
-      this.utilisat.voirUtilisateurId(id).subscribe(data=>{
+      this.user = this.storageService.getUser();
+      this.utilisat.voirUtilisateurId(this.user.id).subscribe(data=>{
       this.voiridutilisat=data;
     });
+
 
   }
 

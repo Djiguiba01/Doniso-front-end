@@ -32,10 +32,9 @@ export class UtilisateurService {
     }
 
      // """"""""""""""""""Affiche les Utilisateurs Par_ID """""""""""""
-     voirUtilisateurId(id:number): Observable<Utilisateur>{
-      return this.http.get<Utilisateur>(`http://localhost:8089/utlisateursecond/voir/${id}`)
+     voirUtilisateurId(id:number): Observable<any>{
+      return this.http.get<any>(`http://localhost:8089/utlisateursecond/voir/${id}`)
     }
-
 
 
 }

@@ -22,9 +22,9 @@ export class Tab2Page {
   voirformatUser:any;
 
   constructor(
-    platform: Platform, 
+    platform: Platform,
     private format:FormationService,
-    private voirdemandformat:DemandService,
+    private voirdemandformat:DemandService
     ){
     this.isAndroid = platform.is('android'); // La Barre
   }

@@ -59,17 +59,7 @@
   <!-- ::::::::: -->
 
   <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal;">Formation à venir </h6>
-  <!-- <ion-slides [options]="options">
-    <ion-slide >
-        <ion-card *ngFor="let venir of formationvenir">
-          <img src="../../assets/images/Back-end/{{venir.image}}" alt="" srcset="">
-                  <p style="color: teal;">{{venir.titre}}</p>
-        </ion-card>
-    </ion-slide>
-  </ion-slides> -->
-
-  <ion-slides [options]="option" class="ion-margin-top">
-
+  <ion-slides [options]="option" class="ion-margin-top" style="margin-top: -5%;">
     <ion-slide *ngFor="let venir of formationvenir">
       <ion-card >
         <img src="../../assets/images/{{venir.image}}">
@@ -80,8 +70,8 @@
 
 
   <!-- Formations -->
-  <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; margin-bottom: 7%;">Nos formations en cours</h6>
-  <ion-card *ngFor="let encours of formationencours |paginate: { itemsPerPage:10, currentPage: p}">
+  <h6 style="text-align: center; font-weight: bold; font-size: 20px;color: teal; margin-bottom: 7%; margin-top: -3%;">Nos formations en cours</h6>
+  <ion-card *ngFor="let encours of formationencours |paginate: { itemsPerPage:10, currentPage: p}" style="margin-top: -2%;">
     <img alt="Silhouette of mountains" src="../../assets/images/{{encours.image}}"/>
     <ion-card-header>
       <ion-card-title style="text-align: center; font-size: 13px;">{{encours.titre}}</ion-card-title>

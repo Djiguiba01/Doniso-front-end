@@ -37,7 +37,6 @@ voiridparticip:any;
     private route:ActivatedRoute,
     private service : ParticipantService,
     private p :FormationService,
-
     private storageService: StorageService
     ) {}
 

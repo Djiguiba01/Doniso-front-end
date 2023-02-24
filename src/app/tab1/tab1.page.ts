@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormationService } from '../Service/formation.service';
 import { ParticipantService } from '../Service/participant.service';
+import { UtilisateurService } from '../Service/utilisateur.service';
 import { AuthService } from '../_services/auth.service';
 import { StorageService } from '../_services/storage.service';
 
@@ -21,13 +22,17 @@ export class Tab1Page {
   description: any;
   role: any;
   route: any;
+  user: any;
+  voiridutilisat: any;
 
 
   constructor(
-    private storageService: StorageService,
     private authService: AuthService,
      private service : FormationService,
      private particip: ParticipantService,
+     private utilisat: UtilisateurService,
+     private storageService: StorageService,
+
      ) {
 
 
@@ -51,6 +56,12 @@ export class Tab1Page {
 
   ngOnInit(): void {
 
+    // Utilisateur Par ID:::::::::::::::::
+  //   this.user = this.storageService.getUser();
+  //   this.utilisat.voirUtilisateurId(this.user.id).subscribe(data=>{
+  //   this.voiridutilisat=data;
+  // });
+
       // Formations en INITIER:::::::::::::::::
       this.service.getFormationavenir().subscribe(data=>{
         this.formationvenir=data;
@@ -62,8 +73,6 @@ export class Tab1Page {
     this.service.getFormationencours().subscribe(data=>{
     this.formationencours=data;
     console.log(this.formationencours)
-
-
   });
 
   //this.reloadPage();
