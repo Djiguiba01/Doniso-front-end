@@ -55,8 +55,6 @@ export class DemandauditPage implements OnInit {
         // Vider le champs Quand on clique sur button
         this.form1();
       });
-
-
     }
     // Image:::::::::::::
     fileChangm(event: any) {

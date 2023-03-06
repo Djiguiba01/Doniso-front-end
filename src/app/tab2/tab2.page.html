@@ -62,6 +62,8 @@
     </div>
   </div>
 
+  <!-- <button color="danger" routerLink="/demandaudit"style="">Soumettre</button> -->
+
   <!-- :::::::::::: -->
 
 
@@ -103,16 +105,52 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'kittens'">
-      <ion-card >
-        <ion-item>
-          Tapdfghjklddddddddddddddddd times gauche
-        </ion-item>
-      </ion-card>
-      <ion-card >
-        <ion-item>
-          Tapdfghjklddddddddddddddddd times
-        </ion-item>
-      </ion-card>
+     <!-- ::::::::::::::: -->
+     <div class="containeur">
+      <h5 style="text-align: center; font-size: 18px; margin-bottom: 10%;"> Voullez-vous être un formateur chez nous ?</h5>
+
+      <div class="formulaire">
+  
+        <div class="input"style=" padding-right: 20px;" >
+          <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email"  [(ngModel)]="email" name="email">
+        </div>
+
+        <!-- (change)="fileChangm($event)" -->
+       
+        <form action=""  style="margin-left: 23%; margin-top: 3%; ">
+          <div class="sss" style="margin-bottom: 5px;">
+            <label for="">Votre Cv</label>
+          </div>
+        <input type="file" name="image" (change)="fileChangm($event)"><br><br>
+        </form>
+  
+        <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+          <input class="telephone-input" type="text" class="form-control" placeholder="Votre quartier" name="nom" >
+        </div> -->
+  
+        <!-- <div class="input" style="margin-top: 5%; padding-right: 20px;">
+          <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Votre prenom" >
+        </div> -->
+  
+        <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+          <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Profession" >
+        </div> -->
+  
+        <!-- <form style="margin-top: 3%;  padding-right: 20px;">
+          <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;">
+            <option value="Sexe">Genre</option>
+            <option value="1">Femme</option>
+            <option value="0">Homme</option>
+          </select>
+        </form> -->
+  
+        <div class="conteneur-submit">
+          <ion-button class="envoyer-input" type="submit" expand="block" (click)="Ajoutpart()" >ENVOYER</ion-button>
+        </div>
+  
+      </div>
+    </div>
+
     </ion-list>
 
   </div>

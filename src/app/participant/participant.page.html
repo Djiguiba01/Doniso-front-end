@@ -8,13 +8,18 @@
 </ion-header>
 
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding"> 
 
   <div class="containeur">
 
     <div class="formulaire">
-      <div class="input" style=" padding-right: 20px;">
-        <input class="telephone-input" type="text" class="form-control" placeholder="Votre nom" name="nom" [(ngModel)]="user">
+
+      <div class="input"style=" padding-right: 20px;" >
+        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email" [(ngModel)]="email" name="email">
+      </div>
+
+      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
+        <input class="telephone-input" type="text" class="form-control" placeholder="Votre quartier" name="nom" [(ngModel)]="user">
       </div>
 
       <div class="input" style="margin-top: 5%; padding-right: 20px;">
@@ -23,11 +28,6 @@
 
       <div class="input" style="margin-top: 5%;  padding-right: 20px;">
         <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Profession" [(ngModel)]="profession" name="profession">
-      </div>
-
-
-      <div class="input" style="margin-top: 5%;  padding-right: 20px;">
-        <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email" [(ngModel)]="email" name="email">
       </div>
 
       <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">

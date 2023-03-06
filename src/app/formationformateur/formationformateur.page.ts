@@ -36,20 +36,22 @@ export class FormationformateurPage implements OnInit {
     //   });
   }
 
+  // Méthode validation
   ModifierEtat(formation: any) {
     const statusformation = formation.etat;
     Swal.fire({
       heightAuto: false,
-      text: 'Voulez-vous  ?',
+      text: 'Voulez-vous valider cette formation ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#04CF72',
       cancelButtonText: 'Annuler',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Modifier',
+      confirmButtonText: 'Valider',
     }).then((result) => {
       if (result.isConfirmed) {
         this.service
+        // Appel méthode validation
           .postFormationFormateur(formation, statusformation)
           .subscribe((data) => {
             this.etatformation = data;
@@ -57,18 +59,18 @@ export class FormationformateurPage implements OnInit {
             Swal.fire({
               heightAuto: false,
               icon: 'success',
-              text: 'data.message',
+              text: 'Formation valider',
               showConfirmButton: false,
               timer: 2000,
             });
-            // this.mesformations();
+            // appel  méthode d'afficher formation
             this.lesFormations();
           });
       }
     });
   }
 
-
+  // Méthode d'afficher formation désigner par formateurs
   lesFormations(){
     this.user
     .voirUtilisateurId(JSON.parse(localStorage.getItem('iduser')!))

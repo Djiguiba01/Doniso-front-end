@@ -48,7 +48,8 @@ voiridparticip:any;
   this.service.getParticipantid(idPart).subscribe(data=>{
   this.voiridparticip=data;
 });
-this.user=this.storageService.getUser().nomcomplet;
+// Récuperer les données de l'utilisateur connecté
+// this.user=this.storageService.getUser().nomcomplet;
 console.log(this.storageService.getUser())
 // console.log("idZZ ----- "+this.user)
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { DemandService } from '../Service/demand.service';
+import { EtreformateurService } from '../Service/etreformateur.service';
 import { FormationService } from '../Service/formation.service';
 
 @Component({
@@ -20,11 +21,22 @@ export class Tab2Page {
   formationencours:any;
   formationterminer:any;
   voirformatUser:any;
+  tout: any;
+  email: any;
+  idFormat: any;
+  file: any;
+
+  // Méthode pour vider le champs lors d'ajout
+  form1(){
+    this.email= '',
+    this.file= ''
+  }
 
   constructor(
     platform: Platform,
     private format:FormationService,
-    private voirdemandformat:DemandService
+    private voirdemandformat:DemandService,
+    private etreformateur: EtreformateurService
     ){
     this.isAndroid = platform.is('android'); // La Barre
   }
@@ -57,5 +69,23 @@ export class Tab2Page {
 // });
 
 }
+
+// Création méthode Sur le button Participation
+Ajoutpart(){
+  this.etreformateur.ajoutDemandeformat(this.email, this.file).subscribe(data =>{
+          this.tout=data;
+          // console.log("ajout"+this.tout)
+          this.form1();
+  });
+  // Vider le champs Quand on clique sur button
+}
+    // Image:::::::::::::
+    fileChangm(event: any) {
+      this.file = event.target.files[0]
+      console.log(this.file)
+      }
+
+ 
+  
 
 }
