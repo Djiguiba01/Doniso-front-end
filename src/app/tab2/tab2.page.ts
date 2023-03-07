@@ -3,6 +3,8 @@ import { Platform } from '@ionic/angular';
 import { DemandService } from '../Service/demand.service';
 import { EtreformateurService } from '../Service/etreformateur.service';
 import { FormationService } from '../Service/formation.service';
+import { AuthService } from '../_services/auth.service';
+import { StorageService } from '../_services/storage.service';
 
 @Component({
   selector: 'app-tab2',
@@ -25,6 +27,7 @@ export class Tab2Page {
   email: any;
   idFormat: any;
   file: any;
+  role:any;
 
   // Méthode pour vider le champs lors d'ajout
   form1(){
@@ -36,7 +39,9 @@ export class Tab2Page {
     platform: Platform,
     private format:FormationService,
     private voirdemandformat:DemandService,
-    private etreformateur: EtreformateurService
+    private etreformateur: EtreformateurService,
+    private storageService: StorageService,
+    private authService: AuthService
     ){
     this.isAndroid = platform.is('android'); // La Barre
   }
@@ -85,7 +90,7 @@ Ajoutpart(){
       console.log(this.file)
       }
 
- 
-  
+
+
 
 }

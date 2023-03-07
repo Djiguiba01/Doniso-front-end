@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'participant/:idFormat',
     loadChildren: () => import('../participant/participant.module').then( m => m.ParticipantPageModule)
   },
+  // {
+  //   path: 'tab1',
+  //   loadChildren: () => import('../tab1/tab1.module').then( m => m.Tab1PageModule)
+  // },
 ];
 
 @NgModule({

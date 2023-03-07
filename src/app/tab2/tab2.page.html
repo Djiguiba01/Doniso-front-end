@@ -1,3 +1,4 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
 <ion-header>
   <ion-toolbar>
      <!-- <ion-title></ion-title> -->
@@ -14,35 +15,27 @@
       <!--Entête Droite -->
       <div class="droite" id="popover-button">
       <img src="assets/images/djiguiba.jpg" alt="">
-      <!-- <ion-buttons slot="danger">
-        <ion-popover trigger="popover-button" [dismissOnSelect]="true" class="popUps">
-          <ng-template class="popUp">
-                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
 
-                <ion-item routerLink ="/monprofil">Mon profil</ion-item>
-              <ion-list >
-                <ion-item routerLink ="/monprofil">Déconnexion</ion-item>
-              </ion-list>
-          </ng-template>
-        </ion-popover>
-      </ion-buttons> -->
     </div>
 
     </div>
 
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content class="card-background-page">
 
 <!-- :::::::::::::::::: -->
+<!-- <ion-button id="popover-button"   color="danger">Open Menu</ion-button> -->
 <ion-popover trigger="popover-button" [dismissOnSelect]="true" color="danger">
   <ng-template>
     <ion-content>
       <ion-list>
-        <ion-item [button]="true" [detail]="false">Option 1</ion-item>
-        <ion-item [button]="true" [detail]="false">Option 2</ion-item>
-        <ion-item [button]="true" >More options...</ion-item>
+        <ion-item [button]="true" [detail]="false" routerLink="/profilauditeur">Mon profil</ion-item>
+        <ion-item [button]="true" [detail]="false" *ngIf="role=='ROLE_FORMATEUR'" routerLink="/formationformateur">Mes cours</ion-item>
+        <ion-item [button]="true" [detail]="false">Déconnexion</ion-item>
+        <!-- <ion-item [button]="true" >More options...</ion-item> -->
       </ion-list>
     </ion-content>
   </ng-template>
@@ -73,7 +66,7 @@
         Demandes
       </ion-segment-button>
       <ion-segment-button value="kittens">
-        Participation
+        Être formateur
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -110,32 +103,32 @@
       <h5 style="text-align: center; font-size: 18px; margin-bottom: 10%;"> Voullez-vous être un formateur chez nous ?</h5>
 
       <div class="formulaire">
-  
+
         <div class="input"style=" padding-right: 20px;" >
           <input class="telephone-input" type="email" class="form-control"  id="password" data-toggle="djiguibabarema@gmail.com" placeholder="Votre email"  [(ngModel)]="email" name="email">
         </div>
 
         <!-- (change)="fileChangm($event)" -->
-       
-        <form action=""  style="margin-left: 23%; margin-top: 3%; ">
-          <div class="sss" style="margin-bottom: 5px;">
+
+        <form action=""  style="margin-left: 48%; margin-top: 3%; ">
+          <div class="sss" style="margin-bottom: 3px;">
             <label for="">Votre Cv</label>
           </div>
         <input type="file" name="image" (change)="fileChangm($event)"><br><br>
         </form>
-  
+
         <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
           <input class="telephone-input" type="text" class="form-control" placeholder="Votre quartier" name="nom" >
         </div> -->
-  
+
         <!-- <div class="input" style="margin-top: 5%; padding-right: 20px;">
           <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Votre prenom" >
         </div> -->
-  
+
         <!-- <div class="input" style="margin-top: 5%;  padding-right: 20px;">
           <input class="telephone-input" type="text" class="form-control"  id="password" data-toggle="password" placeholder="Profession" >
         </div> -->
-  
+
         <!-- <form style="margin-top: 3%;  padding-right: 20px;">
           <select style="width:150px; margin-left: -22%; height: 25px; margin-top: 10px;">
             <option value="Sexe">Genre</option>
@@ -143,11 +136,11 @@
             <option value="0">Homme</option>
           </select>
         </form> -->
-  
+
         <div class="conteneur-submit">
           <ion-button class="envoyer-input" type="submit" expand="block" (click)="Ajoutpart()" >ENVOYER</ion-button>
         </div>
-  
+
       </div>
     </div>
 
@@ -181,6 +174,5 @@
     </ng-template>
   </ion-modal>
 </div>
-
 
 </ion-content>
